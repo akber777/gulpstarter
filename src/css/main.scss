@@ -1,0 +1,26 @@
+// ./src icinde css icinde yaradilan dosyalarin yolun buraya elave ediriy
+
+
+// pages
+@import "./pages/contact";
+
+
+
+// abstract
+@import "./abstract/mixin";
+@import "./abstract/base";
+
+
+
+
+
+// layout
+@import './layout/header';
+
+
+
+
+// components
+@import './components/btn';
+@import './components/card';
+
