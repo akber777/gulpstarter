@@ -10,7 +10,10 @@ const fileinclude = require('gulp-file-include');
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const cleanCSS = require('gulp-clean-css');
-const rename = require("gulp-rename");
+const rename = require('gulp-rename');
+const clean = require('gulp-clean');
+const del = require('del');
+
 livereload = require('gulp-livereload');
 
 var path = {
@@ -117,10 +120,11 @@ function imageCompile() {
 }
 
 // fonts compile
-function fontCompile() {
+function fontCompile(event) {
     return src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts)) // src/fonts icinde olan butun fontlar build/fonts klasorune atilir
         .pipe(livereload())
+
 }
 
 
@@ -129,17 +133,44 @@ function liveReload() {
 
 }
 
+
+
 // watch my task
 
-function watchTask() {
 
-    liveReload();
+// function watchTask() {
 
-    watch(
-        [path.src.css, path.src.html, path.watch.html, path.src.js, path.src.img, path.src.fonts, path.src.libs], // burada istifade edilen fayllarin yolu verilir
-        { interval: 100 }, // setInterval task
-        parallel(compileHtml, compileCss, compileJs, imageCompile, fontCompile, compileLibs)); // parallel function vasitesiyle butun functionlar parallel olaraq calisir
-}
+//     liveReload();
+
+
+// }
+
+
+const watcher = watch(
+    [path.src.css, path.src.html, path.watch.html, path.src.js, path.src.img, path.src.fonts, path.src.libs], // burada istifade edilen fayllarin yolu verilir
+    { interval: 100 }, // setInterval task
+    parallel(compileHtml, compileCss, compileJs, imageCompile, fontCompile, compileLibs)
+); // parallel function vasitesiyle butun functionlar parallel olaraq calisir
+
+
+
+watcher.on('unlink', function (path, stats) {
+    let deletedHtml = path.split('/')[0].split('\\')[path.split('/')[0].split('\\').length - 1]; // html faylarinin silinib silinmediyi src icinde kontrol edilir
+
+    let deletedFont = path.split('/')[0].split('\\')[path.split('/')[0].split('\\').length - 1];
+
+    let deletedImg = path.split('/')[0].split('\\')[path.split('/')[0].split('\\').length - 1];
+
+    (async () => {
+        const deletedFilePaths = await del([
+            'build/' + deletedHtml,
+            'build/fonts/' + deletedFont,
+            'build/img/' + deletedImg,
+            '!src/template/*.html'
+        ]);
+    })();
+
+});
 
 
 exports.default = compileHtml;
@@ -159,10 +190,6 @@ exports.default = liveReload;
 
 
 
-
-
-
 exports.default = series(
-    parallel(compileHtml, compileCss, compileJs, imageCompile, fontCompile, compileLibs),
-    watchTask
+    parallel(compileHtml, compileCss, compileJs, imageCompile, fontCompile, compileLibs, liveReload),
 );
