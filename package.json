@@ -34,6 +34,8 @@
     "node-sass": "^4.14.1"
   },
   "dependencies": {
+    "del": "^6.0.0",
+    "gulp-clean": "^0.4.0",
     "imagemin-mozjpeg": "^9.0.0",
     "normalize.css": "^8.0.1"
   }
