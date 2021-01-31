@@ -4,7 +4,6 @@ class Gulp {
   }
 
   static gulp = () => {
-
     return 'JAVASCRIPT CONVERT ECMASCRIPT 5 WITH BABEL';
   }
 

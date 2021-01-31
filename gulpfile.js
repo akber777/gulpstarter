@@ -13,8 +13,7 @@ const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const clean = require('gulp-clean');
 const del = require('del');
-
-livereload = require('gulp-livereload');
+const browserSync = require('browser-sync').create();
 
 var path = {
     build: {
@@ -57,7 +56,7 @@ function compileHtml() {
             basepath: '@file'
         }))
         .pipe(gulp.dest(path.build.html))
-        .pipe(livereload())
+
 
 }
 
@@ -84,7 +83,7 @@ function compileCss() {
             suffix: '.min'
         }))
         .pipe(gulp.dest(path.build.css))
-        .pipe(livereload())
+
 
 }
 
@@ -103,7 +102,7 @@ function compileJs() {
             }
         }))
         .pipe(gulp.dest(path.build.js))
-        .pipe(livereload());
+        ;
 }
 
 // compile images and minify images
@@ -116,34 +115,32 @@ function imageCompile() {
             ]
         })) // imagemin vasitesiyle src/img icinde olan butun sekiller resize edilerey olcusu kicildilir
         .pipe(gulp.dest(path.build.img))
-        .pipe(livereload())
+
 }
 
 // fonts compile
 function fontCompile(event) {
     return src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts)) // src/fonts icinde olan butun fontlar build/fonts klasorune atilir
-        .pipe(livereload())
+
 
 }
 
-
-function liveReload() {
-    return livereload.listen();
-
-}
 
 
 
 // watch my task
 
 
-// function watchTask() {
-
-//     liveReload();
-
-
-// }
+function liveServer() {
+    browserSync.init({
+        server: "build",
+        port: 8800,
+        ui: {
+            port: 7700
+        }
+    })
+}
 
 
 const watcher = watch(
@@ -173,6 +170,8 @@ watcher.on('unlink', function (path, stats) {
 });
 
 
+watcher.on('change', browserSync.reload);
+
 exports.default = compileHtml;
 
 exports.default = fontCompile;
@@ -185,11 +184,10 @@ exports.default = imageCompile;
 
 exports.default = compileLibs;
 
-exports.default = liveReload;
 
 
 
 
 exports.default = series(
-    parallel(compileHtml, compileCss, compileJs, imageCompile, fontCompile, compileLibs, liveReload),
+    parallel(compileHtml, compileCss, compileJs, imageCompile, fontCompile, compileLibs, liveServer),
 );
