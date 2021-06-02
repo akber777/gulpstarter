@@ -68,8 +68,8 @@ bütün css class adları BEM standardına uyğun olaraq verilib
 startere livereload elave edilib ctrl + s etdiyiniz anda avtomatik olaraq starter ozu deyisikliy olunan fayllari yenilecey ve butun dosyalariniz yenilenecey  bununlada sizin 
 bowserde refresh etmeyinze ehtiyac qalmayacaq
 
-## LIVERELOAD DISABLED
-bezen livereload butun doslayari yenilediyi ucun gec isleye biler isteseniz livereloadi deaktiv ede bilersiniz bunun ucun gulpfile js icinde function livreloadi disabled elemey lazimdir 
+## IMAGES RESIZE
+bezen sekillerin resize olunması cox vaxt apara bilər bele olduqda gulpfile.js icersinde imageCompile() funksiyasının icində .pipe(imagemin({use: [imageminMozjpeg()] }))  deaktiv  etməy lazimıdir butun proyekti bitirdiyden sonra bunu aktiv edib sekilləri resize edib build img faylına ata bilərsiz
 
 
 
