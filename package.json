@@ -39,5 +39,9 @@
     "gulp-clean": "^0.4.0",
     "imagemin-mozjpeg": "^9.0.0",
     "normalize.css": "^8.0.1"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
