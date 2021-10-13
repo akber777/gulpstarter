@@ -65,11 +65,15 @@ bütün css class adları BEM standardına uyğun olaraq verilib
 
 
 ## LIVERELOAD
-startere livereload elave edilib ctrl + s etdiyiniz anda avtomatik olaraq starter ozu deyisikliy olunan fayllari yenilecey ve butun dosyalariniz yenilenecey  bununlada sizin 
+Startere livereload elave edilib ctrl + s etdiyiniz anda avtomatik olaraq starter ozu deyisikliy olunan fayllari yenilecey ve butun dosyalariniz yenilenecey  bununlada sizin 
 bowserde refresh etmeyinze ehtiyac qalmayacaq
 
 ## IMAGES RESIZE
-bezen sekillerin resize olunması cox vaxt apara bilər bele olduqda gulpfile.js icersinde imageCompile() funksiyasının icində .pipe(imagemin({use: [imageminMozjpeg()] }))  deaktiv  etməy lazimıdir butun proyekti bitirdiyden sonra bunu aktiv edib sekilləri resize edib build img faylına ata bilərsiz
+Bezen sekillerin resize olunması cox vaxt apara bilər bele olduqda gulpfile.js icersinde imageCompile() funksiyasının icində .pipe(imagemin({use: [imageminMozjpeg()] }))  deaktiv  etməy lazimıdir butun proyekti bitirdiyden sonra bunu aktiv edib sekilləri resize edib build img faylına ata bilərsiz
+
+## QEYD
+Starter Node.js in yeni versiyalarinda problem cixara bilir bunun olmaması üçün Node.js v14.15.5 versiyasını yoxlayın
+
 
 
 
