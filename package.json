@@ -1,5 +1,5 @@
 {
-  "name": "gulpStarter",
+  "Name": "gulpStarter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "start": "gulp"
   },
   "keywords": [],
-  "author": {
+  "Author": {
     "NAME": "AKBER",
     "LASTNAME": "AKHMEDZADEH",
     "GITHUB": "https://github.com/akber777"
@@ -31,9 +31,9 @@
     "gulp-livereload": "^4.0.2",
     "gulp-minify": "^3.1.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.0.0",
     "gulp-watch": "^5.0.1",
-    "node-sass": "^4.14.1"
+    "sass": "^1.43.3"
   },
   "dependencies": {
     "del": "^6.0.0",
@@ -42,7 +42,9 @@
     "gulp-run": "^1.7.1",
     "gulp-watchman": "^2.0.2",
     "imagemin-mozjpeg": "^9.0.0",
-    "normalize.css": "^8.0.1"
+    "node-sass": "^6.0.1",
+    "normalize.css": "^8.0.1",
+    "tar": "^6.1.11"
   },
   "browserslist": [
     "> 1%",

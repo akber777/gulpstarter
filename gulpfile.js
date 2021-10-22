@@ -1,8 +1,7 @@
 const gulp = require("gulp");
 const pathNode = require("path");
 const { src, watch, series, parallel } = require("gulp");
-const sass = require("gulp-sass");
-sass.compiler = require("node-sass");
+const sass = require("gulp-sass")(require("sass"));
 const minify = require("gulp-minify");
 const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
