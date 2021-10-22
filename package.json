@@ -41,6 +41,7 @@
     "gulp-clean": "^0.4.0",
     "gulp-run": "^1.7.1",
     "gulp-watchman": "^2.0.2",
+    "gyp": "^0.5.0",
     "imagemin-mozjpeg": "^9.0.0",
     "node-sass": "^6.0.1",
     "normalize.css": "^8.0.1",
