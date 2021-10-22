@@ -1,11 +1,13 @@
 .header {
+  // css
+  display: block;
+
+  &__info {
     // css
     display: block;
+  }
+}
 
-    &__info {
-        // css
-        display: block;
-    }
-	
-    
+body {
+  background-color: green;
 }

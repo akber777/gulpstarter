@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "keywords": [],
   "author": {
-    "Name": "AKBER",
+    "NAME": "AKBER",
     "LASTNAME": "AKHMEDZADEH",
     "GITHUB": "https://github.com/akber777"
   },
@@ -36,7 +37,10 @@
   },
   "dependencies": {
     "del": "^6.0.0",
+    "fb-watchman": "^2.0.1",
     "gulp-clean": "^0.4.0",
+    "gulp-run": "^1.7.1",
+    "gulp-watchman": "^2.0.2",
     "imagemin-mozjpeg": "^9.0.0",
     "normalize.css": "^8.0.1"
   },
