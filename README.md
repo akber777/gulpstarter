@@ -73,7 +73,7 @@ Startere livereload elave edilib ctrl + s etdiyiniz anda avtomatik olaraq starte
 bowserde refresh etmeyinze ehtiyac qalmayacaq
 
 ## IMAGES RESIZE
-Bezen sekillerin resize olunması cox vaxt apara bilər bele olduqda gulpfile.js icersinde imageCompile() funksiyasının icində .pipe(imagemin({use: [imageminMozjpeg()] }))  deaktiv  etməy lazimıdir butun proyekti bitirdiyden sonra bunu aktiv edib sekilləri resize edib build img faylına ata bilərsiz
+Bezen sekillerin resize olunması cox vaxt apara bilər bele olduqda gulpfile.js icersinde imageCompile() funksiyasının icində .pipe(imagemin({use: [imageminMozjpeg()] }))  deaktiv  etməy lazimıdir butun proyekti bitirdiyden sonra bunu aktiv edə bilərsiniz resize olunmuş şəkillər build img klasörüne əlavə ediləcəy
 
 
 
