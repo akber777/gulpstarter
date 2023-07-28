@@ -111,11 +111,11 @@ function compileJs() {
 
 function imageCompile() {
   return src(path.src.img)
-    .pipe(
-      imagemin({
-        use: [imageminMozjpeg()],
-      })
-    ) // imagemin vasitesiyle src/img icinde olan butun sekiller resize edilerey olcusu kicildilir
+    // .pipe(
+    //   imagemin({
+    //     use: [imageminMozjpeg()],
+    //   })
+    // ) // imagemin vasitesiyle src/img icinde olan butun sekiller resize edilerey olcusu kicildilir
     .pipe(gulp.dest(path.build.img));
 }
 
@@ -171,7 +171,7 @@ watcher.on("unlink", function (path, stats) {
   ];
 
   (async () => {
-    const deletedFilePaths = await del([
+     await del([
       "build/" + deletedHtml,
       "build/fonts/" + deletedFont,
       "build/img/" + deletedImg,
@@ -181,36 +181,37 @@ watcher.on("unlink", function (path, stats) {
 });
 
 watcher.on("change", browserSync.reload);
+watcher.on("error", browserSync.pause);
 
 const directoryPath = pathNode.join(__dirname, "./src/css");
 
-let allCssFiles = [];
+// let allCssFiles = [];
 
-watcher.on("change", async function () {
-  allCssFiles = [];
-  fs.readdir(directoryPath, function (err, files) {
-    files.forEach(function (file, i) {
-      if (file !== "main.scss") {
-        fs.readdir(directoryPath + "/" + file, function (error, splitFiles) {
-          splitFiles.forEach(function (replaceFile, index) {
-            let rep = replaceFile.replace(".scss", `"`);
-            let replaceAll =
-              "@import" + ` "` + "./" + file + "/" + rep.replace("_", "") + ";";
-            allCssFiles.push(replaceAll);
-          });
-        });
-      }
-    });
-  });
+// watcher.on("change", async function () {
+//   allCssFiles = [];
+//   fs.readdir(directoryPath, function (err, files) {
+//     files.forEach(function (file, i) {
+//       if (file !== "main.scss") {
+//         fs.readdir(directoryPath + "/" + file, function (error, splitFiles) {
+//           splitFiles.forEach(function (replaceFile, index) {
+//             let rep = replaceFile.replace(".scss", `"`);
+//             let replaceAll =
+//               "@import" + ` "` + "./" + file + "/" + rep.replace("_", "") + ";";
+//             allCssFiles.push(replaceAll);
+//           });
+//         });
+//       }
+//     });
+//   });
 
-  fs.readFile("./src/css/main.scss", "utf8", function (err, data) {
-    fs.writeFile(
-      "./src/css/main.scss",
-      allCssFiles.join("").toString(),
-      function (err, result) {}
-    );
-  });
-});
+//   fs.readFile("./src/css/main.scss", "utf8", function (err, data) {
+//     fs.writeFile(
+//       "./src/css/main.scss",
+//       allCssFiles.join("").toString(),
+//       function (err, result) {}
+//     );
+//   });
+// });
 
 exports.default = compileHtml;
 

@@ -1,0 +1,500 @@
+<form class="simple_form main-search js-main-search" id="new_q" name="q_form" novalidate="novalidate" action="/autos"
+    accept-charset="UTF-8" method="get"><input autocomplete="off" type="hidden" name="q[sort]" id="q_sort">
+    <div class="tz-container">
+        <div class="main-search__row main-search__row-4 tz-d-grid">
+            <div class="main-search__item">
+                <div class="tz-dropdown">
+                    <select placeholder="Marka" class="selectSumo noNext  tz-dropdown__selected">
+                        <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="ford">Ford</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                        <option value="bmw">BMW</option>
+                    </select>
+                </div>
+            </div>
+            <div class="main-search__item">
+                <select placeholder="Model" class="selectSumo noNext  tz-dropdown__selected">
+                    <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                    <option value="volvo">Volvo</option>
+                    <option value="ford">Ford</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                </select>
+            </div>
+            <div class="main-search__item">
+                <div class="main-search__control tz-d-flex tz-align-center"><input checked="checked" id="q_used"
+                        name="q[used]" type="radio" value=""><label
+                        class="main-search__control-tab js-main-search-controls-tab" for="q_used">Hamısı</label><input
+                        type="radio" value="0" name="q[used]" id="q_used_0"><label
+                        class="main-search__control-tab js-main-search-controls-tab" for="q_used_0">Yeni</label><input
+                        type="radio" value="1" name="q[used]" id="q_used_1"><label
+                        class="main-search__control-tab js-main-search-controls-tab" for="q_used_1">Sürülmüş</label>
+                </div>
+            </div>
+            <div class="main-search__item"><input name="q[region][]" type="hidden" value="" autocomplete="off">
+                <select placeholder="Şəhər" class="selectSumo selectSumo tz-dropdown__selected " multiple>
+                    <option class="clearAllSelect tz-dropdown__option--reset">Sıfırla</option>
+                    <option value="7">Ağcabədi</option>
+                    <option value="4">Ağdam</option>
+                    <option value="6">Ağdaş</option>
+                    <option value="8">Ağstafa</option>
+                    <option value="10">Ağsu</option>
+                    <option value="9">Astara</option>
+                    <option value="78">Babək</option>
+                    <option value="1">Bakı</option>
+                    <option value="14">Balakən</option>
+                    <option value="13">Beyləqan</option>
+                    <option value="12">Bərdə</option>
+                    <option value="15">Biləsuvar</option>
+                    <option value="26">Cəbrayıl</option>
+                    <option value="25">Cəlilabad</option>
+                    <option value="27">Culfa</option>
+                    <option value="24">Daşkəsən</option>
+                    <option value="23">Dəliməmmədli</option>
+                    <option value="60">Füzuli</option>
+                    <option value="36">Gədəbəy</option>
+                    <option value="2">Gəncə</option>
+                    <option value="18">Goranboy</option>
+                    <option value="17">Göyçay</option>
+                    <option value="19">Göygöl</option>
+                    <option value="20">Göytəpə</option>
+                    <option value="77">Hacıqabul</option>
+                    <option value="22">Horadiz</option>
+                    <option value="32">İmişli</option>
+                    <option value="33">İsmayıllı</option>
+                    <option value="41">Kürdəmir</option>
+                    <option value="42">Laçın</option>
+                    <option value="43">Lerik</option>
+                    <option value="11">Lənkəran</option>
+                    <option value="44">Liman</option>
+                    <option value="45">Masallı</option>
+                    <option value="46">Mingəçevir</option>
+                    <option value="47">Naftalan</option>
+                    <option value="48">Naxçıvan</option>
+                    <option value="49">Neftçala</option>
+                    <option value="50">Oğuz</option>
+                    <option value="51">Ordubad</option>
+                    <option value="35">Qax</option>
+                    <option value="34">Qazax</option>
+                    <option value="16">Qəbələ</option>
+                    <option value="21">Qobustan</option>
+                    <option value="38">Quba</option>
+                    <option value="40">Qusar</option>
+                    <option value="52">Saatlı</option>
+                    <option value="53">Sabirabad</option>
+                    <option value="68">Şabran</option>
+                    <option value="54">Salyan</option>
+                    <option value="73">Şamaxı</option>
+                    <option value="55">Samux</option>
+                    <option value="72">Şəki</option>
+                    <option value="69">Şəmkir</option>
+                    <option value="70">Şərur</option>
+                    <option value="74">Şirvan</option>
+                    <option value="56">Siyəzən</option>
+                    <option value="3">Sumqayıt</option>
+                    <option value="58">Tərtər</option>
+                    <option value="57">Tovuz</option>
+                    <option value="59">Ucar</option>
+                    <option value="62">Xaçmaz</option>
+                    <option value="67">Xırdalan</option>
+                    <option value="66">Xızı</option>
+                    <option value="63">Xocavənd</option>
+                    <option value="65">Xudat</option>
+                    <option value="76">Yardımlı</option>
+                    <option value="28">Yevlax</option>
+                    <option value="29">Zaqatala</option>
+                    <option value="31">Zərdab</option>
+                </select>
+            </div>
+        </div>
+        <div class="main-search__row main-search__row-4 tz-d-grid">
+            <div class="main-search__item">
+                <div class="tz-form__group tz-form__group--col-2 tz-d-grid">
+                    <div class="tz-form__group-item">
+                        <div class="tz-form__floating"><input inputmode="numeric"
+                                class="string optional form-control js-val-with-spaces" placeholder=" " maxlength="11"
+                                pattern="[0-9]*" size="11" type="text" name="q[price_from]" id="q_price_from"><label
+                                for="q_price_from">Qiymət, min.</label><span
+                                class="tz-form__floating-btn js-reset-input"></span></div>
+                    </div>
+                    <div class="tz-form__group-item">
+                        <div class="tz-form__floating"><input inputmode="numeric"
+                                class="string optional form-control js-val-with-spaces" placeholder=" " maxlength="11"
+                                pattern="[0-9]*" size="11" type="text" name="q[price_to]" id="q_price_to"><label
+                                for="q_price_to">maks.</label><span class="tz-form__floating-btn js-reset-input"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-search__item tz-d-flex tz-justify-between">
+                <div class="tz-d-flex">
+                    <div class="tz-dropdown " data-id="q_currency">
+                        <select placeholder="PLN" class="selectSumo tz-dropdown__selected ">
+                            <option value="PLN" class="noPad" selected="PLN">PLN</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="tz-form__check"><input name="q[loan]" type="hidden" value="0" autocomplete="off"><input
+                        class="tz-form__check-input" type="checkbox" value="1" name="q[loan]" id="q_loan"><label
+                        class="tz-form__check-label" for="q_loan">Kredit</label></div>
+                <div class="tz-form__check"><input name="q[barter]" type="hidden" value="0" autocomplete="off"><input
+                        class="tz-form__check-input" type="checkbox" value="1" name="q[barter]" id="q_barter"><label
+                        class="tz-form__check-label" for="q_barter">Barter</label></div>
+            </div>
+            <div class="main-search__item"><input name="q[category][]" type="hidden" value="" autocomplete="off">
+                <select placeholder="Ban Novu" class="selectSumo tz-dropdown__selected " multiple>
+                    <option class="clearAllSelect tz-dropdown__option--reset">Sıfırla</option>
+                    <option value="7">Ağcabədi</option>
+                    <option value="4">Ağdam</option>
+                    <option value="6">Ağdaş</option>
+                    <option value="8">Ağstafa</option>
+                    <option value="10">Ağsu</option>
+                    <option value="9">Astara</option>
+                    <option value="78">Babək</option>
+                    <option value="1">Bakı</option>
+                    <option value="14">Balakən</option>
+                    <option value="13">Beyləqan</option>
+                    <option value="12">Bərdə</option>
+                    <option value="15">Biləsuvar</option>
+                    <option value="26">Cəbrayıl</option>
+                    <option value="25">Cəlilabad</option>
+                    <option value="27">Culfa</option>
+                    <option value="24">Daşkəsən</option>
+                    <option value="23">Dəliməmmədli</option>
+                    <option value="60">Füzuli</option>
+                    <option value="36">Gədəbəy</option>
+                    <option value="2">Gəncə</option>
+                    <option value="18">Goranboy</option>
+                    <option value="17">Göyçay</option>
+                    <option value="19">Göygöl</option>
+                    <option value="20">Göytəpə</option>
+                    <option value="77">Hacıqabul</option>
+                    <option value="22">Horadiz</option>
+                    <option value="32">İmişli</option>
+                    <option value="33">İsmayıllı</option>
+                    <option value="41">Kürdəmir</option>
+                    <option value="42">Laçın</option>
+                    <option value="43">Lerik</option>
+                    <option value="11">Lənkəran</option>
+                    <option value="44">Liman</option>
+                    <option value="45">Masallı</option>
+                    <option value="46">Mingəçevir</option>
+                    <option value="47">Naftalan</option>
+                    <option value="48">Naxçıvan</option>
+                    <option value="49">Neftçala</option>
+                    <option value="50">Oğuz</option>
+                    <option value="51">Ordubad</option>
+                    <option value="35">Qax</option>
+                    <option value="34">Qazax</option>
+                    <option value="16">Qəbələ</option>
+                    <option value="21">Qobustan</option>
+                    <option value="38">Quba</option>
+                    <option value="40">Qusar</option>
+                    <option value="52">Saatlı</option>
+                    <option value="53">Sabirabad</option>
+                    <option value="68">Şabran</option>
+                    <option value="54">Salyan</option>
+                    <option value="73">Şamaxı</option>
+                    <option value="55">Samux</option>
+                    <option value="72">Şəki</option>
+                    <option value="69">Şəmkir</option>
+                    <option value="70">Şərur</option>
+                    <option value="74">Şirvan</option>
+                    <option value="56">Siyəzən</option>
+                    <option value="3">Sumqayıt</option>
+                    <option value="58">Tərtər</option>
+                    <option value="57">Tovuz</option>
+                    <option value="59">Ucar</option>
+                    <option value="62">Xaçmaz</option>
+                    <option value="67">Xırdalan</option>
+                    <option value="66">Xızı</option>
+                    <option value="63">Xocavənd</option>
+                    <option value="65">Xudat</option>
+                    <option value="76">Yardımlı</option>
+                    <option value="28">Yevlax</option>
+                    <option value="29">Zaqatala</option>
+                    <option value="31">Zərdab</option>
+                </select>
+            </div>
+            <div class="main-search__item">
+                <div class="tz-form__group tz-form__group--col-2">
+                    <div class="tz-form__group-item">
+                        <div class="tz-dropdown" data-id="q_year_from">
+                            <select placeholder="İl,min" class="selectSumo  tz-dropdown__selected">
+                                <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                                <option value="volvo">Volvo</option>
+                                <option value="ford">Ford</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                                <option value="bmw">BMW</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="tz-form__group-item">
+                        <div class="tz-dropdown" data-id="q_year_to">
+                            <select placeholder="İl,min" class="selectSumo  tz-dropdown__selected">
+                                <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                                <option value="volvo">Volvo</option>
+                                <option value="ford">Ford</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                                <option value="bmw">BMW</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide-blk js-main-search-slide-blk">
+            <div class="tz-d-flex tz-wrap-wrap tz-gap-10">
+                <div class="main-search__item main-search__item--4">
+                    <div class="tz-dropdown" data-id="q_color">
+                        <select data-color-select="true" placeholder="Rəng" class="selectSumo  tz-dropdown__selected"
+                            multiple>
+                            <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                            <option data-color="#000000" value="5">Qara</option>
+                            <option data-color="#505050" value="27">Yaş Asfalt</option>
+                            <option data-color="#808080" value="7">Boz</option>
+                            <option data-color="#c0c0c0" value="8">Gümüşü</option>
+                            <option data-color="#ffffff" value="2">Ağ</option>
+                            <option data-color="#f5f5dc" value="12">Bej</option>
+                            <option data-color="#9b2d30" value="35">Tünd qırmızı</option>
+                            <option data-color="#ff0000" value="1">Qırmızı</option>
+                            <option data-color="#ffc0cb" value="21">Çəhrayı</option>
+                            <option data-color="#ffa500" value="15">Narıncı</option>
+                            <option data-color="#ffd700" value="14">Qızılı</option>
+                            <option data-color="#ffff00" value="6">Sarı</option>
+                            <option data-color="#00ff00" value="4">Yaşıl</option>
+                            <option data-color="#42aaff" value="9">Mavi</option>
+                            <option data-color="#0000ff" value="3">Göy</option>
+                            <option data-color="#8b00ff" value="11">Bənövşəyi</option>
+                            <option data-color="#964b00" value="10">Qəhvəyi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--4">
+                    <div class="tz-dropdown">
+                        <select multiple placeholder="Yanacaq növü" class="selectSumo  tz-dropdown__selected">
+                            <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="ford">Ford</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--4">
+                    <div class="tz-dropdown" data-id="q_gear">
+                        <select placeholder="Ötürücü" class="selectSumo  tz-dropdown__selected">
+                            <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="ford">Ford</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--4">
+                    <div class="tz-dropdown" data-id="q_gear">
+                        <select placeholder=" Sürətlər qutusu" class="selectSumo  tz-dropdown__selected">
+                            <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="ford">Ford</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--3">
+                    <div class="tz-form__group tz-form__group--col-2">
+                        <div class="tz-form__group-item">
+                            <div class="tz-dropdown" data-id="q_engine_volume_from">
+                                <select placeholder="Həcm (sm3), min." class="selectSumo  tz-dropdown__selected">
+                                    <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                                    <option value="volvo">Volvo</option>
+                                    <option value="ford">Ford</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                    <option value="bmw">BMW</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tz-form__group-item">
+                            <div class="tz-dropdown">
+                                <select placeholder="maks" class="selectSumo  tz-dropdown__selected">
+                                    <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                                    <option value="volvo">Volvo</option>
+                                    <option value="ford">Ford</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                    <option value="bmw">BMW</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--3">
+                    <div class="tz-form__group tz-form__group--col-2 tz-d-grid">
+                        <div class="tz-form__group-item">
+                            <div class="tz-form__floating"><input
+                                    class="string optional form-control js-val-with-spaces" data-maxlength="4"
+                                    placeholder=" " maxlength="4" size="4" type="text" name="q[power_from]"
+                                    id="q_power_from"><label for="q_power_from">Güc (a. g.), min.</label><span
+                                    class="tz-form__floating-btn js-reset-input"></span></div>
+                        </div>
+                        <div class="tz-form__group-item">
+                            <div class="tz-form__floating"><input
+                                    class="string optional form-control js-val-with-spaces" data-maxlength="4"
+                                    placeholder=" " maxlength="4" size="4" type="text" name="q[power_to]"
+                                    id="q_power_to"><label for="q_power_to">maks.</label><span
+                                    class="tz-form__floating-btn js-reset-input"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--3 js-filtered-control-item"
+                    data-hidden-id="[&quot;1&quot;]">
+                    <div class="tz-form__group tz-form__group--col-2 tz-d-grid">
+                        <div class="tz-form__group-item">
+                            <div class="tz-form__floating"><input
+                                    class="string optional form-control js-val-with-spaces" placeholder=" "
+                                    maxlength="9" size="9" type="text" name="q[mileage_from]" id="q_mileage_from"><label
+                                    for="q_mileage_from">Yürüş (km), min.</label><span
+                                    class="tz-form__floating-btn js-reset-input"></span></div>
+                        </div>
+                        <div class="tz-form__group-item">
+                            <div class="tz-form__floating"><input
+                                    class="string optional form-control js-val-with-spaces" placeholder=" "
+                                    maxlength="9" size="9" type="text" name="q[mileage_to]" id="q_mileage_to"><label
+                                    for="q_mileage_to">maks.</label><span
+                                    class="tz-form__floating-btn js-reset-input"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--4 js-filtered-control-item">
+                    <div class="main-search__control main-search__control--shops tz-d-flex tz-align-center"><input
+                            checked="checked" id="q_only_shops" name="q[only_shops]" type="radio" value=""><label
+                            class="main-search__control-tab" for="q_only_shops">Hamısı</label><input type="radio"
+                            value="1" name="q[only_shops]" id="q_only_shops_1"><label class="main-search__control-tab"
+                            for="q_only_shops_1">Avtosalonlar</label><input type="radio" value="0" name="q[only_shops]"
+                            id="q_only_shops_0"><label class="main-search__control-tab"
+                            for="q_only_shops_0">Şəxsi</label></div>
+                </div>
+                <div class="main-search__item main-search__item--4 js-filtered-control-item">
+                    <div class="tz-dropdown" data-id="q_prior_owners_count">
+                        <select placeholder="Sahiblərinin sayı" class="selectSumo  tz-dropdown__selected">
+                            <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="ford">Ford</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--4">
+                    <div class="main-search__control tz-d-flex tz-align-center">
+                        <div class="tz-dropdown" data-id="q_seats_count">
+                            <select placeholder="Yerlərin sayı" class="selectSumo  tz-dropdown__selected">
+                                <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                                <option value="volvo">Volvo</option>
+                                <option value="ford">Ford</option>
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                                <option value="bmw">BMW</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-search__item main-search__item--4">
+                    <div class="tz-dropdown" data-id="q_market">
+                        <select placeholder="Hansı bazar üçün yığılıb" class="selectSumo  tz-dropdown__selected">
+                            <option class="clearAllSelect tz-dropdown__option--reset" value="">Sıfırla</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="ford">Ford</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="main-search__item"><input name="q[crashed]" type="hidden" value="1"
+                        autocomplete="off"><input class="tz-form__check-input" type="checkbox" value="0"
+                        name="q[crashed]" id="q_crashed"><label class="tz-form__check-label" for="q_crashed">Vuruğu
+                        yoxdur</label></div>
+                <div class="main-search__item"><input name="q[painted]" type="hidden" value="1"
+                        autocomplete="off"><input class="tz-form__check-input" type="checkbox" value="0"
+                        name="q[painted]" id="q_painted"><label class="tz-form__check-label"
+                        for="q_painted">Rənglənməyib</label></div>
+                <div class="main-search__item"><input name="q[for_spare_parts]" type="hidden" value="0"
+                        autocomplete="off"><input class="tz-form__check-input" type="checkbox" value="1"
+                        name="q[for_spare_parts]" id="q_for_spare_parts"><label class="tz-form__check-label"
+                        for="q_for_spare_parts">Yalnız qəzalı avtomobillər</label></div>
+            </div>
+            <div class="main-search__blk main-search__blk--checkbox-list">
+                <div class="main-search__blk-title"><span>Avtomobilin təchizatı</span></div><span><input
+                        class="tz-form__check-input" type="checkbox" value="4" name="q[extras][]" id="q_extras_4"><label
+                        class="tz-form__check-label tz-text tz-text--primary" for="q_extras_4">Yüngül lehimli
+                        disklər</label></span><span><input class="tz-form__check-input" type="checkbox" value="5"
+                        name="q[extras][]" id="q_extras_5"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_5">ABS</label></span><span><input class="tz-form__check-input" type="checkbox"
+                        value="7" name="q[extras][]" id="q_extras_7"><label
+                        class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_7">Lyuk</label></span><span><input class="tz-form__check-input" type="checkbox"
+                        value="8" name="q[extras][]" id="q_extras_8"><label
+                        class="tz-form__check-label tz-text tz-text--primary" for="q_extras_8">Yağış
+                        sensoru</label></span><span><input class="tz-form__check-input" type="checkbox" value="9"
+                        name="q[extras][]" id="q_extras_9"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_9">Mərkəzi
+                        qapanma</label></span><span><input class="tz-form__check-input" type="checkbox" value="10"
+                        name="q[extras][]" id="q_extras_10"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_10">Park
+                        radarı</label></span><span><input class="tz-form__check-input" type="checkbox" value="11"
+                        name="q[extras][]" id="q_extras_11"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_11">Kondisioner</label></span><span><input class="tz-form__check-input"
+                        type="checkbox" value="12" name="q[extras][]" id="q_extras_12"><label
+                        class="tz-form__check-label tz-text tz-text--primary" for="q_extras_12">Oturacaqların
+                        isidilməsi</label></span><span><input class="tz-form__check-input" type="checkbox" value="13"
+                        name="q[extras][]" id="q_extras_13"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_13">Dəri
+                        salon</label></span><span><input class="tz-form__check-input" type="checkbox" value="14"
+                        name="q[extras][]" id="q_extras_14"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_14">Ksenon
+                        lampalar</label></span><span><input class="tz-form__check-input" type="checkbox" value="15"
+                        name="q[extras][]" id="q_extras_15"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_15">Arxa görüntü
+                        kamerası</label></span><span><input class="tz-form__check-input" type="checkbox" value="16"
+                        name="q[extras][]" id="q_extras_16"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_16">Yan
+                        pərdələr</label></span><span><input class="tz-form__check-input" type="checkbox" value="17"
+                        name="q[extras][]" id="q_extras_17"><label class="tz-form__check-label tz-text tz-text--primary"
+                        for="q_extras_17">Oturacaqların
+                        ventilyasiyası</label></span>
+            </div>
+        </div>
+        <div class="main-search__footer tz-d-flex tz-justify-between tz-align-center">
+            <div class="main-search__footer-left">
+                <div class="main-search__ad-count">Bu gün: <a href="/autos"><span>1457 yeni elan</span></a></div>
+            </div>
+            <div class="main-search__footer-right">
+                <div
+                    class="main-search__btn main-search__btn--reset tz-btn tz-btn-link js-main-search-reset-btn is-active">
+                    <span>Sıfırla</span>
+                </div>
+                <div
+                    class="main-search__btn tz-btn tz-btn-link tz-btn-link--primary tz-btn-link--arrow js-main-search-slide-down">
+                    <span>Daha çox filtr</span>
+                </div>
+                <button name="commit" type="submit" class="main-search__btn tz-btn tz-btn--primary">Elanları
+                    göstər</button>
+            </div>
+        </div>
+    </div>
+
+</form>

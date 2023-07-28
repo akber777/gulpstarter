@@ -1,0 +1,992 @@
+@@include('./template/header.html')
+<div class="main-container">
+    <div class="section-title section-title--top section-title--grey">
+        <div class="tz-container tz-align-center tz-d-flex">
+            <p class="section-title_name">ELAN YERLƏŞDİRMƏK</p>
+        </div>
+    </div>
+    <div class="new-product">
+        <div class="limits-container"></div>
+        <div class="form-header">
+            <div class="new-product--notice">
+                <ul>
+                    <li>Üç ay ərzində bir nəqliyyat vasitəsi yalnız bir dəfə pulsuz dərc oluna bilər.</li>
+                    <li>Üç ay ərzində təkrar və ya oxşar elanlar (marka/model, rəng) ödənişlidir.</li>
+                    <li>Elanınızı saytın ön sıralarında görmək üçün "İrəli çək" xidmətindən istifadə edin.</li>
+                </ul>
+            </div>
+        </div>
+        <form class="simple_form product-form js-product-form" id="new_auto"
+            data-auth-url="https://hello.turbo.az/?return_to=aHR0cHM6Ly90dXJiby5hei9hdXRvcy9uZXc="
+            novalidate="novalidate" enctype="multipart/form-data" action="/autos" accept-charset="UTF-8"
+            data-remote="true" method="post"><input type="hidden" name="access_token" id="access_token"
+                autocomplete="off">
+            <div class="new-product-i">
+                <div class="left-side">
+                    <div class="input string required auto_make_id"><label class="string required control-label"
+                            for="auto_make_id">Marka <abbr title="required">*</abbr></label><select name="auto[make_id]"
+                            id="auto_make_id">
+                            <option value="">Seçin</option>
+                            <option value="280">Abarth</option>
+                            <option value="232">ABM</option>
+                            <option value="250">ACG Cars</option>
+                            <option value="28">Acura</option>
+                            <option value="30">Alfa Romeo</option>
+                            <option value="254">Alke</option>
+                            <option value="267">AMC</option>
+                            <option value="156">Aprilia</option>
+                            <option value="249">Arctic Cat</option>
+                            <option value="273">Argo</option>
+                            <option value="262">ARO</option>
+                            <option value="178">Arora</option>
+                            <option value="221">Ashok Leyland </option>
+                            <option value="134">Asia</option>
+                            <option value="86">Aston Martin</option>
+                            <option value="268">ATV</option>
+                            <option value="9">Audi</option>
+                            <option value="419">Avatr</option>
+                            <option value="274">Avia</option>
+                            <option value="218">Baic</option>
+                            <option value="327">Bajaj</option>
+                            <option value="174">Baotian</option>
+                            <option value="226">BAW</option>
+                            <option value="330">BAZ</option>
+                            <option value="215">Belka</option>
+                            <option value="375">Benelli</option>
+                            <option value="19">Bentley</option>
+                            <option value="387">Bestune</option>
+                            <option value="136">BMC</option>
+                            <option value="3">BMW</option>
+                            <option value="62">BMW Alpina</option>
+                            <option value="92">Brilliance</option>
+                            <option value="228">Buell</option>
+                            <option value="408">Bugatti</option>
+                            <option value="84">Buick</option>
+                            <option value="378">Bull Motors</option>
+                            <option value="51">BYD</option>
+                            <option value="395">C.Moto</option>
+                            <option value="38">Cadillac</option>
+                            <option value="220">Can-Am</option>
+                            <option value="153">Celimo</option>
+                            <option value="397">Cevo</option>
+                            <option value="259">CFMOTO</option>
+                            <option value="163">Changan</option>
+                            <option value="52">Chery</option>
+                            <option value="41">Chevrolet</option>
+                            <option value="225">Chituma</option>
+                            <option value="10">Chrysler</option>
+                            <option value="27">Citroen</option>
+                            <option value="107">CNG Bus</option>
+                            <option value="177">Coles</option>
+                            <option value="239">CZ</option>
+                            <option value="76">Dacia</option>
+                            <option value="180">Dadi</option>
+                            <option value="11">Daewoo</option>
+                            <option value="91">DAF</option>
+                            <option value="66">Daihatsu</option>
+                            <option value="173">Dali</option>
+                            <option value="270">Datsun</option>
+                            <option value="148">Dayun</option>
+                            <option value="279">Derways</option>
+                            <option value="405">DFSK</option>
+                            <option value="162">Dnepr</option>
+                            <option value="60">Dodge</option>
+                            <option value="117">DongFeng</option>
+                            <option value="147">Ducati</option>
+                            <option value="372">Entegra Coach</option>
+                            <option value="266">ErAZ</option>
+                            <option value="176">ERF</option>
+                            <option value="256">Estrima</option>
+                            <option value="241">Eurotex</option>
+                            <option value="244">FAUN</option>
+                            <option value="79">FAW</option>
+                            <option value="42">Ferrari</option>
+                            <option value="37">Fiat</option>
+                            <option value="278">Foday</option>
+                            <option value="2">Ford</option>
+                            <option value="49">Foton</option>
+                            <option value="275">Freightliner </option>
+                            <option value="401">FSO</option>
+                            <option value="159">Gabro</option>
+                            <option value="175">GAC</option>
+                            <option value="21">GAZ</option>
+                            <option value="72">Geely</option>
+                            <option value="248">GEM Cars</option>
+                            <option value="376">Genesis</option>
+                            <option value="182">Geon</option>
+                            <option value="263">GIBBS</option>
+                            <option value="151">Gilera</option>
+                            <option value="137">Ginaf</option>
+                            <option value="82">GMC</option>
+                            <option value="58">Gonow</option>
+                            <option value="50">Great Wall</option>
+                            <option value="65">Hafei</option>
+                            <option value="383">Haima</option>
+                            <option value="154">Hamtaz</option>
+                            <option value="142">Haojue</option>
+                            <option value="140">Harley-Davidson</option>
+                            <option value="242">Haval</option>
+                            <option value="258">Hisun</option>
+                            <option value="12">Honda</option>
+                            <option value="388">Hongqi</option>
+                            <option value="110">HOWO</option>
+                            <option value="409">Hozon</option>
+                            <option value="13">Hummer</option>
+                            <option value="240">Huzhou</option>
+                            <option value="167">Hyosung</option>
+                            <option value="1">Hyundai</option>
+                            <option value="166">IFA</option>
+                            <option value="64">IJ</option>
+                            <option value="101">Ikarus</option>
+                            <option value="424">IM</option>
+                            <option value="411">Indian Motorcycle</option>
+                            <option value="15">Infiniti</option>
+                            <option value="116">Iran Khodro</option>
+                            <option value="276">Irbis</option>
+                            <option value="74">Isuzu</option>
+                            <option value="253">ItalCar</option>
+                            <option value="224">Ivanovec</option>
+                            <option value="67">Iveco</option>
+                            <option value="124">JAC</option>
+                            <option value="35">Jaguar</option>
+                            <option value="155">Jawa</option>
+                            <option value="36">Jeep</option>
+                            <option value="384">Jetour</option>
+                            <option value="216">Jiajue</option>
+                            <option value="337">Jianshe</option>
+                            <option value="265">Jinan</option>
+                            <option value="168">Jinbei</option>
+                            <option value="109">JMC</option>
+                            <option value="235">Jonway</option>
+                            <option value="390">KAIYI</option>
+                            <option value="90">KamAz</option>
+                            <option value="406">Kanuni</option>
+                            <option value="420">Karry</option>
+                            <option value="407">Karsan</option>
+                            <option value="88">KAvZ</option>
+                            <option value="139">Kawasaki</option>
+                            <option value="374">Kayo</option>
+                            <option value="237">KAZ</option>
+                            <option value="338">Keeway</option>
+                            <option value="282">Khazar</option>
+                            <option value="8">Kia</option>
+                            <option value="169">Kinroad</option>
+                            <option value="119">KrAZ</option>
+                            <option value="141">KTM</option>
+                            <option value="332">Kuba</option>
+                            <option value="5">LADA (VAZ)</option>
+                            <option value="43">Lamborghini</option>
+                            <option value="69">Lancia</option>
+                            <option value="20">Land Rover</option>
+                            <option value="179">LAZ</option>
+                            <option value="14">Lexus</option>
+                            <option value="412">Li Auto</option>
+                            <option value="102">Liebherr</option>
+                            <option value="87">Lifan</option>
+                            <option value="46">Lincoln</option>
+                            <option value="238">Lotus</option>
+                            <option value="103">LuAz</option>
+                            <option value="391">Lvtong</option>
+                            <option value="414">Lynk &amp; Co</option>
+                            <option value="329">Mack</option>
+                            <option value="382">Magirus-Deutz</option>
+                            <option value="112">MAN</option>
+                            <option value="423">Maple</option>
+                            <option value="257">Marshell</option>
+                            <option value="44">Maserati</option>
+                            <option value="129">Maybach</option>
+                            <option value="100">MAZ</option>
+                            <option value="26">Mazda</option>
+                            <option value="326">McLaren</option>
+                            <option value="172">Megelli</option>
+                            <option value="4">Mercedes</option>
+                            <option value="252">Mercedes-Maybach</option>
+                            <option value="47">Mercury</option>
+                            <option value="127">MG</option>
+                            <option value="31">Mini</option>
+                            <option value="146">Minsk</option>
+                            <option value="6">Mitsubishi</option>
+                            <option value="286">Mondial</option>
+                            <option value="81">Moskvich</option>
+                            <option value="416">Moto Guzzi</option>
+                            <option value="243">Muravey</option>
+                            <option value="158">MV Agusta</option>
+                            <option value="324">Nama</option>
+                            <option value="283">Neman</option>
+                            <option value="227">Neoplan</option>
+                            <option value="161">Neptun</option>
+                            <option value="415">Nio</option>
+                            <option value="7">Nissan</option>
+                            <option value="379">NIU</option>
+                            <option value="371">Nooma</option>
+                            <option value="106">Oldsmobile</option>
+                            <option value="394">Oltcit</option>
+                            <option value="29">Opel</option>
+                            <option value="181">Otocar</option>
+                            <option value="269">Otosan</option>
+                            <option value="271">Packard</option>
+                            <option value="222">Parvaz</option>
+                            <option value="246">Paykan</option>
+                            <option value="114">PAZ</option>
+                            <option value="16">Peugeot</option>
+                            <option value="152">Piaggio</option>
+                            <option value="392">Pilotcar</option>
+                            <option value="126">Plymouth</option>
+                            <option value="247">Polaris</option>
+                            <option value="396">Polestar</option>
+                            <option value="48">Pontiac</option>
+                            <option value="32">Porsche</option>
+                            <option value="135">Proton</option>
+                            <option value="105">RAF</option>
+                            <option value="272">Ravon</option>
+                            <option value="17">Renault</option>
+                            <option value="284">Rialli</option>
+                            <option value="234">Rieju</option>
+                            <option value="229">Riga</option>
+                            <option value="333">RKS</option>
+                            <option value="171">Roewe</option>
+                            <option value="18">Rolls-Royce</option>
+                            <option value="78">Rover</option>
+                            <option value="422">Royal Enfield</option>
+                            <option value="80">Saab</option>
+                            <option value="94">Saipa</option>
+                            <option value="377">SamAuto</option>
+                            <option value="93">Saturn</option>
+                            <option value="108">Scania</option>
+                            <option value="251">Scion</option>
+                            <option value="59">SEAT</option>
+                            <option value="97">SeAz</option>
+                            <option value="115">Setra</option>
+                            <option value="133">Shacman</option>
+                            <option value="132">Shaolin</option>
+                            <option value="144">Shineray</option>
+                            <option value="288">Shuanghuan</option>
+                            <option value="400">Sinotech</option>
+                            <option value="418">Sinski</option>
+                            <option value="22">Skoda</option>
+                            <option value="160">Skyline</option>
+                            <option value="399">Skywell</option>
+                            <option value="61">Smart</option>
+                            <option value="322">SMZ</option>
+                            <option value="402">Soueast</option>
+                            <option value="264">Sport</option>
+                            <option value="45">Ssang Yong</option>
+                            <option value="393">Star</option>
+                            <option value="34">Subaru</option>
+                            <option value="33">Suzuki</option>
+                            <option value="380">SYM</option>
+                            <option value="334">Talbot</option>
+                            <option value="231">Tata</option>
+                            <option value="98">Tatra</option>
+                            <option value="255">Tazzari</option>
+                            <option value="128">Temsa</option>
+                            <option value="245">Tesla</option>
+                            <option value="39">Tofas</option>
+                            <option value="413">Togg</option>
+                            <option value="23">Toyota</option>
+                            <option value="236">Trabant</option>
+                            <option value="233">Triumph</option>
+                            <option value="385">Tufan</option>
+                            <option value="53">UAZ</option>
+                            <option value="145">Ural</option>
+                            <option value="170">Veloci</option>
+                            <option value="223">Vespa</option>
+                            <option value="410">VGV</option>
+                            <option value="24">Volkswagen</option>
+                            <option value="386">Volta</option>
+                            <option value="25">Volvo</option>
+                            <option value="150">Vosxod</option>
+                            <option value="417">Voyah</option>
+                            <option value="149">Vyatka</option>
+                            <option value="165">Waitzinger</option>
+                            <option value="335">Wanfeng</option>
+                            <option value="389">Wild West</option>
+                            <option value="77">Willys</option>
+                            <option value="404">Wuling</option>
+                            <option value="219">XCMG</option>
+                            <option value="157">Xin Kai</option>
+                            <option value="373">Xinling</option>
+                            <option value="421">XPeng</option>
+                            <option value="381">Yadea</option>
+                            <option value="138">Yamaha</option>
+                            <option value="325">Yuejin</option>
+                            <option value="281">Yufeng</option>
+                            <option value="331">Yutong</option>
+                            <option value="328">Zamyad</option>
+                            <option value="57">ZAZ</option>
+                            <option value="403">Zeekr</option>
+                            <option value="85">ZIL</option>
+                            <option value="285">Zongshen</option>
+                            <option value="143">Zontes</option>
+                            <option value="164">Zoomlion</option>
+                            <option value="425">Zotye</option>
+                            <option value="398">Zuk</option>
+                            <option value="217">ZX Auto</option>
+                        </select></div>
+                </div>
+                <div class="right-side">
+                    <div class="input select required auto_fuel_type"><label class="select required control-label"
+                            for="auto_fuel_type_id">Yanacaq növü <abbr title="required">*</abbr></label><select
+                            class="select required form-control" name="auto[fuel_type_id]" id="auto_fuel_type_id">
+                            <option value="" label=" "></option>
+                            <option value="1">Benzin</option>
+                            <option value="2">Dizel</option>
+                            <option value="3">Qaz</option>
+                            <option value="4">Elektro</option>
+                            <option value="5">Hibrid</option>
+                            <option value="6">Plug-in Hibrid</option>
+                        </select></div>
+                </div>
+            </div>
+            <div class="new-product-i">
+                <div class="left-side">
+                    <div class="input string required auto_model"><label class="string required control-label"
+                            for="auto_model">Model <abbr title="required">*</abbr></label><select name="auto[model_id]"
+                            id="auto_model_id">
+                            <option value="">Seçin</option>
+                        </select></div>
+                </div>
+                <div class="right-side">
+                    <div class="input select required auto_gear"><label class="select required control-label"
+                            for="auto_gear_id">Ötürücü <abbr title="required">*</abbr></label><select
+                            class="select required form-control" name="auto[gear_id]" id="auto_gear_id">
+                            <option value="" label=" "></option>
+                            <option value="1">Arxa</option>
+                            <option value="2">Ön</option>
+                            <option value="3">Tam</option>
+                        </select></div>
+                </div>
+            </div>
+            <div class="new-product-i">
+                <div class="left-side">
+                    <div class="input select required auto_category"><label class="select required control-label"
+                            for="auto_category_id">Ban növü <abbr title="required">*</abbr></label><select
+                            class="select required form-control" name="auto[category_id]" id="auto_category_id">
+                            <option value="" label=" "></option>
+                            <option value="9">Avtobus</option>
+                            <option value="16">Dartqı</option>
+                            <option value="14">Furqon</option>
+                            <option value="2">Hetçbek</option>
+                            <option value="11">Kabriolet</option>
+                            <option value="26">Karvan</option>
+                            <option value="3">Kupe</option>
+                            <option value="25">Kvadrosikl</option>
+                            <option value="28">Liftbek</option>
+                            <option value="7">Mikroavtobus</option>
+                            <option value="5">Minivan</option>
+                            <option value="27">Moped</option>
+                            <option value="20">Motosiklet</option>
+                            <option value="21">Offroader / SUV</option>
+                            <option value="6">Pikap</option>
+                            <option value="22">Qolfkar</option>
+                            <option value="8">Rodster</option>
+                            <option value="1">Sedan</option>
+                            <option value="4">Universal</option>
+                            <option value="19">Van</option>
+                            <option value="13">Yük maşını</option>
+                        </select></div>
+                </div>
+                <div class="right-side">
+                    <div class="input select required auto_transmission"><label class="select required control-label"
+                            for="auto_transmission_id">Sürətlər qutusu <abbr title="required">*</abbr></label><select
+                            class="select required form-control" name="auto[transmission_id]" id="auto_transmission_id">
+                            <option value="" label=" "></option>
+                            <option value="1">Mexaniki</option>
+                            <option value="2">Avtomat</option>
+                            <option value="3">Robotlaşdırılmış</option>
+                            <option value="4">Variator</option>
+                        </select></div>
+                </div>
+            </div>
+            <div class="new-product-i">
+                <div class="left-side tooltips-input"><label class="integer required control-label"
+                        for="auto_mileage">Yürüş <abbr title="required">*</abbr></label><input step="10000" max=""
+                        class="numeric integer required form-control" min="0" type="number" name="auto[mileage]"
+                        id="auto_mileage">
+                    <div class="input radio_buttons optional auto_mileage_unit"><input type="hidden"
+                            name="auto[mileage_unit]" value="" autocomplete="off"><span class="radio"><input
+                                class="radio_buttons optional form-control" type="radio" value="km" checked="checked"
+                                name="auto[mileage_unit]" id="auto_mileage_unit_km"><label
+                                class="collection_radio_buttons" for="auto_mileage_unit_km">km</label></span><span
+                            class="radio"><input class="radio_buttons optional form-control" type="radio" value="mile"
+                                name="auto[mileage_unit]" id="auto_mileage_unit_mile"><label
+                                class="collection_radio_buttons" for="auto_mileage_unit_mile">mi</label></span></div>
+                </div>
+                <div class="right-side">
+                    <div class="input select required auto_reg_year"><label class="select required control-label"
+                            for="auto_reg_year">İl <abbr title="required">*</abbr></label><select
+                            class="select required form-control" name="auto[reg_year]" id="auto_reg_year">
+                            <option value="" label=" "></option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                            <option value="2009">2009</option>
+                            <option value="2008">2008</option>
+                            <option value="2007">2007</option>
+                            <option value="2006">2006</option>
+                            <option value="2005">2005</option>
+                            <option value="2004">2004</option>
+                            <option value="2003">2003</option>
+                            <option value="2002">2002</option>
+                            <option value="2001">2001</option>
+                            <option value="2000">2000</option>
+                            <option value="1999">1999</option>
+                            <option value="1998">1998</option>
+                            <option value="1997">1997</option>
+                            <option value="1996">1996</option>
+                            <option value="1995">1995</option>
+                            <option value="1994">1994</option>
+                            <option value="1993">1993</option>
+                            <option value="1992">1992</option>
+                            <option value="1991">1991</option>
+                            <option value="1990">1990</option>
+                            <option value="1989">1989</option>
+                            <option value="1988">1988</option>
+                            <option value="1987">1987</option>
+                            <option value="1986">1986</option>
+                            <option value="1985">1985</option>
+                            <option value="1984">1984</option>
+                            <option value="1983">1983</option>
+                            <option value="1982">1982</option>
+                            <option value="1981">1981</option>
+                            <option value="1980">1980</option>
+                            <option value="1979">1979</option>
+                            <option value="1978">1978</option>
+                            <option value="1977">1977</option>
+                            <option value="1976">1976</option>
+                            <option value="1975">1975</option>
+                            <option value="1974">1974</option>
+                            <option value="1973">1973</option>
+                            <option value="1972">1972</option>
+                            <option value="1971">1971</option>
+                            <option value="1970">1970</option>
+                            <option value="1969">1969</option>
+                            <option value="1968">1968</option>
+                            <option value="1967">1967</option>
+                            <option value="1966">1966</option>
+                            <option value="1965">1965</option>
+                            <option value="1964">1964</option>
+                            <option value="1963">1963</option>
+                            <option value="1962">1962</option>
+                            <option value="1961">1961</option>
+                            <option value="1960">1960</option>
+                            <option value="1959">1959</option>
+                            <option value="1958">1958</option>
+                            <option value="1957">1957</option>
+                            <option value="1956">1956</option>
+                            <option value="1955">1955</option>
+                            <option value="1954">1954</option>
+                            <option value="1953">1953</option>
+                            <option value="1952">1952</option>
+                            <option value="1951">1951</option>
+                            <option value="1950">1950</option>
+                            <option value="1949">1949</option>
+                            <option value="1948">1948</option>
+                            <option value="1947">1947</option>
+                            <option value="1946">1946</option>
+                            <option value="1945">1945</option>
+                            <option value="1944">1944</option>
+                            <option value="1943">1943</option>
+                            <option value="1942">1942</option>
+                            <option value="1941">1941</option>
+                            <option value="1940">1940</option>
+                            <option value="1939">1939</option>
+                            <option value="1938">1938</option>
+                            <option value="1937">1937</option>
+                            <option value="1936">1936</option>
+                            <option value="1935">1935</option>
+                            <option value="1934">1934</option>
+                            <option value="1933">1933</option>
+                            <option value="1932">1932</option>
+                            <option value="1931">1931</option>
+                            <option value="1930">1930</option>
+                            <option value="1929">1929</option>
+                            <option value="1928">1928</option>
+                            <option value="1927">1927</option>
+                            <option value="1926">1926</option>
+                            <option value="1925">1925</option>
+                            <option value="1924">1924</option>
+                            <option value="1923">1923</option>
+                            <option value="1922">1922</option>
+                            <option value="1921">1921</option>
+                            <option value="1920">1920</option>
+                            <option value="1919">1919</option>
+                            <option value="1918">1918</option>
+                            <option value="1917">1917</option>
+                            <option value="1916">1916</option>
+                            <option value="1915">1915</option>
+                            <option value="1914">1914</option>
+                            <option value="1913">1913</option>
+                            <option value="1912">1912</option>
+                            <option value="1911">1911</option>
+                            <option value="1910">1910</option>
+                            <option value="1909">1909</option>
+                            <option value="1908">1908</option>
+                            <option value="1907">1907</option>
+                            <option value="1906">1906</option>
+                            <option value="1905">1905</option>
+                            <option value="1904">1904</option>
+                            <option value="1903">1903</option>
+                        </select></div>
+                </div>
+            </div>
+            <div class="new-product-i">
+                <div class="left-side">
+                    <div class="input select required auto_color"><label class="select required control-label"
+                            for="auto_color_id">Rəng <abbr title="required">*</abbr></label><select
+                            class="select required form-control" name="auto[color_id]" id="auto_color_id">
+                            <option value="" label=" "></option>
+                            <option value="5">Qara</option>
+                            <option value="27">Yaş Asfalt</option>
+                            <option value="7">Boz</option>
+                            <option value="8">Gümüşü</option>
+                            <option value="2">Ağ</option>
+                            <option value="12">Bej</option>
+                            <option value="35">Tünd qırmızı</option>
+                            <option value="1">Qırmızı</option>
+                            <option value="21">Çəhrayı</option>
+                            <option value="15">Narıncı</option>
+                            <option value="14">Qızılı</option>
+                            <option value="6">Sarı</option>
+                            <option value="4">Yaşıl</option>
+                            <option value="9">Mavi</option>
+                            <option value="3">Göy</option>
+                            <option value="11">Bənövşəyi</option>
+                            <option value="10">Qəhvəyi</option>
+                        </select></div>
+                </div>
+                <div class="right-side">
+                    <div class="input select required auto_engine_volume"><label class="select required control-label"
+                            for="auto_engine_volume">Mühərrikin həcmi, sm<sup>3</sup> <abbr
+                                title="required">*</abbr></label><select class="select required form-control"
+                            name="auto[engine_volume]" id="auto_engine_volume">
+                            <option value="" label=" "></option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="150">150</option>
+                            <option value="200">200</option>
+                            <option value="250">250</option>
+                            <option value="300">300</option>
+                            <option value="350">350</option>
+                            <option value="400">400</option>
+                            <option value="450">450</option>
+                            <option value="500">500</option>
+                            <option value="600">600</option>
+                            <option value="700">700</option>
+                            <option value="800">800</option>
+                            <option value="900">900</option>
+                            <option value="1000">1000</option>
+                            <option value="1100">1100</option>
+                            <option value="1200">1200</option>
+                            <option value="1300">1300</option>
+                            <option value="1400">1400</option>
+                            <option value="1500">1500</option>
+                            <option value="1600">1600</option>
+                            <option value="1700">1700</option>
+                            <option value="1800">1800</option>
+                            <option value="1900">1900</option>
+                            <option value="2000">2000</option>
+                            <option value="2100">2100</option>
+                            <option value="2200">2200</option>
+                            <option value="2300">2300</option>
+                            <option value="2400">2400</option>
+                            <option value="2500">2500</option>
+                            <option value="2600">2600</option>
+                            <option value="2700">2700</option>
+                            <option value="2800">2800</option>
+                            <option value="2900">2900</option>
+                            <option value="3000">3000</option>
+                            <option value="3100">3100</option>
+                            <option value="3200">3200</option>
+                            <option value="3300">3300</option>
+                            <option value="3400">3400</option>
+                            <option value="3500">3500</option>
+                            <option value="3600">3600</option>
+                            <option value="3700">3700</option>
+                            <option value="3800">3800</option>
+                            <option value="3900">3900</option>
+                            <option value="4000">4000</option>
+                            <option value="4100">4100</option>
+                            <option value="4200">4200</option>
+                            <option value="4300">4300</option>
+                            <option value="4400">4400</option>
+                            <option value="4500">4500</option>
+                            <option value="4600">4600</option>
+                            <option value="4700">4700</option>
+                            <option value="4800">4800</option>
+                            <option value="4900">4900</option>
+                            <option value="5000">5000</option>
+                            <option value="5100">5100</option>
+                            <option value="5200">5200</option>
+                            <option value="5300">5300</option>
+                            <option value="5400">5400</option>
+                            <option value="5500">5500</option>
+                            <option value="5600">5600</option>
+                            <option value="5700">5700</option>
+                            <option value="5800">5800</option>
+                            <option value="5900">5900</option>
+                            <option value="6000">6000</option>
+                            <option value="6100">6100</option>
+                            <option value="6200">6200</option>
+                            <option value="6300">6300</option>
+                            <option value="6400">6400</option>
+                            <option value="6500">6500</option>
+                            <option value="7000">7000</option>
+                            <option value="7500">7500</option>
+                            <option value="8000">8000</option>
+                            <option value="8500">8500</option>
+                            <option value="9000">9000</option>
+                            <option value="9500">9500</option>
+                            <option value="10000">10000</option>
+                            <option value="11000">11000</option>
+                            <option value="12000">12000</option>
+                            <option value="13000">13000</option>
+                            <option value="14000">14000</option>
+                            <option value="15000">15000</option>
+                            <option value="16000">16000</option>
+                        </select></div>
+                </div>
+            </div>
+            <div class="new-product-i">
+                <div class="left-side tooltips-input"><label class="non_null required control-label"
+                        for="auto_price">Qiymət <abbr title="required">*</abbr></label><input
+                        class="numeric non_null required form-control" min="500" max="2147483647" value="" type="number"
+                        step="any" name="auto[price]" id="auto_price">
+                    <div class="tooltips">
+                        <div class="tooltips-body">Qiymət bölməsində maşının tam qiyməti yazılmalıdır. Kreditin ilkin
+                            ödəniş məbləği yalnız "Əlavə məlumat" bölməsində qeyd edilməlidir</div>
+                    </div>
+                    <div class="input radio_buttons optional auto_currency"><input type="hidden" name="auto[currency]"
+                            value="" autocomplete="off"><span class="radio"><input
+                                class="radio_buttons optional form-control" type="radio" value="azn"
+                                name="auto[currency]" id="auto_currency_azn"><label class="collection_radio_buttons"
+                                for="auto_currency_azn">AZN</label></span><span class="radio"><input
+                                class="radio_buttons optional form-control" type="radio" value="usd"
+                                name="auto[currency]" id="auto_currency_usd"><label class="collection_radio_buttons"
+                                for="auto_currency_usd">USD</label></span><span class="radio"><input
+                                class="radio_buttons optional form-control" type="radio" value="eur"
+                                name="auto[currency]" id="auto_currency_eur"><label class="collection_radio_buttons"
+                                for="auto_currency_eur">EUR</label></span></div>
+                </div>
+                <div class="right-side">
+                    <div class="input integer required auto_power"><label class="integer required control-label"
+                            for="auto_power">Mühərrikin gücü, a.g. <abbr title="required">*</abbr></label><input
+                            class="numeric integer required form-control" min="1" max="2000" type="number" step="1"
+                            name="auto[power]" id="auto_power"></div>
+                </div>
+            </div>
+            <div class="new-product-i new-product-i--large--indent">
+                <div class="left-side">
+                    <div class="input select optional auto_prior_owners_count"><label
+                            class="select optional control-label" for="auto_prior_owners_count">Neçənci
+                            sahibisiniz?</label><select class="select optional form-control"
+                            name="auto[prior_owners_count]" id="auto_prior_owners_count">
+                            <option value="" label=" "></option>
+                            <option value="1">Birinci</option>
+                            <option value="2">İkinci</option>
+                            <option value="3">Üçüncü</option>
+                            <option value="4">Dördüncü və ya daha çox</option>
+                        </select></div>
+                </div>
+                <div class="right-side">
+                    <div class="input select optional auto_market"><label class="select optional control-label"
+                            for="auto_market_id">Hansı bazar üçün yığılıb</label><select
+                            class="select optional form-control" name="auto[market_id]" id="auto_market_id">
+                            <option value="" label=" "></option>
+                            <option value="1">Amerika</option>
+                            <option value="2">Avropa</option>
+                            <option value="9">Digər</option>
+                            <option value="6">Dubay</option>
+                            <option value="5">Koreya</option>
+                            <option value="7">Rəsmi diler</option>
+                            <option value="8">Rusiya</option>
+                            <option value="4">Yaponiya</option>
+                        </select></div>
+                </div>
+            </div>
+            <div class="new-product-i new-product-i--large--indent new-product-i--inline"><label>Vəziyyəti</label>
+                <div class="boolean boolean--top">
+                    <div class="new-product-i__blk-container tz-d-flex tz-align-center">
+                        <div class="new-product-i__blk"><input name="auto[crashed]" type="hidden" value="0"
+                                autocomplete="off"><input type="checkbox" value="1" name="auto[crashed]"
+                                id="auto_crashed"><label for="auto_crashed"><span class="title">Vuruğu var</span><span
+                                    class="description">Bir və ya bir neçə detalı dəyişdirilib və ya təmir
+                                    olunub.</span></label></div>
+                        <div class="new-product-i__blk"><input name="auto[painted]" type="hidden" value="0"
+                                autocomplete="off"><input type="checkbox" value="1" name="auto[painted]"
+                                id="auto_painted"><label for="auto_painted"><span class="title">Rənglənib</span><span
+                                    class="description">Bir və ya bir neçə detalı rənglənib və ya kosmetik işlər
+                                    görülüb.</span></label></div>
+                        <div class="new-product-i__blk"><input name="auto[for_spare_parts]" type="hidden" value="0"
+                                autocomplete="off"><input type="checkbox" value="1" name="auto[for_spare_parts]"
+                                id="auto_for_spare_parts"><label for="auto_for_spare_parts"><span class="title">Qəzalı
+                                    və ya ehtiyat hissələr üçün</span><span class="description">Təmirə ehtiyacı var və
+                                    ya ümumiyyətlə yararsız vəziyyətdədir.</span></label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="new-product-i new-product-i--large--indent new-product-i--inline"><label
+                    class="integer optional control-label" for="auto_seats_count">Yerlərin sayı</label>
+                <div class="boolean"><input type="hidden" name="auto[seats_count]" value="" autocomplete="off"><span
+                        class="radio"><input class="radio_buttons optional form-control" type="radio" value="1"
+                            name="auto[seats_count]" id="auto_seats_count_1"><label class="collection_radio_buttons"
+                            for="auto_seats_count_1">1</label></span><span class="radio"><input
+                            class="radio_buttons optional form-control" type="radio" value="2" name="auto[seats_count]"
+                            id="auto_seats_count_2"><label class="collection_radio_buttons"
+                            for="auto_seats_count_2">2</label></span><span class="radio"><input
+                            class="radio_buttons optional form-control" type="radio" value="3" name="auto[seats_count]"
+                            id="auto_seats_count_3"><label class="collection_radio_buttons"
+                            for="auto_seats_count_3">3</label></span><span class="radio"><input
+                            class="radio_buttons optional form-control" type="radio" value="4" name="auto[seats_count]"
+                            id="auto_seats_count_4"><label class="collection_radio_buttons"
+                            for="auto_seats_count_4">4</label></span><span class="radio"><input
+                            class="radio_buttons optional form-control" type="radio" value="5" name="auto[seats_count]"
+                            id="auto_seats_count_5"><label class="collection_radio_buttons"
+                            for="auto_seats_count_5">5</label></span><span class="radio"><input
+                            class="radio_buttons optional form-control" type="radio" value="6" name="auto[seats_count]"
+                            id="auto_seats_count_6"><label class="collection_radio_buttons"
+                            for="auto_seats_count_6">6</label></span><span class="radio"><input
+                            class="radio_buttons optional form-control" type="radio" value="7" name="auto[seats_count]"
+                            id="auto_seats_count_7"><label class="collection_radio_buttons"
+                            for="auto_seats_count_7">7</label></span><span class="radio"><input
+                            class="radio_buttons optional form-control" type="radio" value="8" name="auto[seats_count]"
+                            id="auto_seats_count_8"><label class="collection_radio_buttons"
+                            for="auto_seats_count_8">8+</label></span><span class="radio"><input checked=""
+                            class="radio_buttons" id="auto_seats_count_0" name="auto[seats_count]" type="radio"
+                            value=""><label class="collection_radio_buttons" for="auto_seats_count_0">Qeyd
+                            olunmasın</label></span></div>
+            </div>
+            <div class="input boolean optional auto_loan"><input name="auto[loan]" type="hidden" value="0"
+                    autocomplete="off"><input class="boolean optional form-control" type="checkbox" value="1"
+                    name="auto[loan]" id="auto_loan"><label class="boolean optional control-label"
+                    for="auto_loan">Kreditdədir</label></div>
+            <div class="input boolean optional auto_barter"><input name="auto[barter]" type="hidden" value="0"
+                    autocomplete="off"><input class="boolean optional form-control" type="checkbox" value="1"
+                    name="auto[barter]" id="auto_barter"><label class="boolean optional control-label"
+                    for="auto_barter">Barter mümkündür</label></div>
+            <div class="new-product-i new-product-i--large--indent new-product-i--uppercase">
+                <div class="input string optional auto_vin"><label for="auto_vin">VIN-kod</label><input
+                        class="string optional form-control" maxlength="17" size="17" type="text" name="auto[vin]"
+                        id="auto_vin">
+                    <div class="new-product-i__hint-container">
+                        <div class="tz-hint-btn">VIN-kodu haradan tapmaq olar?</div>
+                        <div class="tz-hint">
+                            <div class="tz-hint__title">VIN-kodu haradan tapmaq olar?</div><img
+                                src="https://turbo.azstatic.com/assets/shared/vin/vin-card-front-81bf4b5bfecab412f7cfc3a7cf367dc0bad10df6af6e60958f70f5ce6918a9ff.jpg">
+                            <div class="tz-hint__info">Nəqliyyat vasitəsinin qeydiyyat şəhadətnaməsinin (texniki
+                                pasport) ön tərəfində.</div><img
+                                src="https://turbo.azstatic.com/assets/shared/vin/vin-card-back-754ab88d5349c867ddeaaaea23bf653ce4c0f8d2788c066c0ffa3bd6ca16b405.jpg">
+                            <div class="tz-hint__info">Yeni nəsil qeydiyyat şəhadətnaməsinin arxa tərəfində.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="input text optional auto_description field_with_hint"><label class="text optional control-label"
+                    for="auto_description">Əlavə məlumat</label><textarea class="text optional form-control"
+                    name="auto[description]" id="auto_description"></textarea><span class="hint">telefon nömrələri qeyd
+                    etmək qadağandır</span></div>
+            <div class="input check_boxes optional auto_extras"><label
+                    class="check_boxes optional control-label">Avtomobilin təchizatı</label><input type="hidden"
+                    name="auto[extra_ids][]" value="" autocomplete="off"><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="4" name="auto[extra_ids][]"
+                        id="auto_extra_ids_4"><label class="collection_check_boxes" for="auto_extra_ids_4">Yüngül
+                        lehimli disklər</label></span><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="5" name="auto[extra_ids][]"
+                        id="auto_extra_ids_5"><label class="collection_check_boxes"
+                        for="auto_extra_ids_5">ABS</label></span><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="7" name="auto[extra_ids][]"
+                        id="auto_extra_ids_7"><label class="collection_check_boxes"
+                        for="auto_extra_ids_7">Lyuk</label></span><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="8" name="auto[extra_ids][]"
+                        id="auto_extra_ids_8"><label class="collection_check_boxes" for="auto_extra_ids_8">Yağış
+                        sensoru</label></span><span class="checkbox"><input class="check_boxes optional form-control"
+                        type="checkbox" value="9" name="auto[extra_ids][]" id="auto_extra_ids_9"><label
+                        class="collection_check_boxes" for="auto_extra_ids_9">Mərkəzi qapanma</label></span><span
+                    class="checkbox"><input class="check_boxes optional form-control" type="checkbox" value="10"
+                        name="auto[extra_ids][]" id="auto_extra_ids_10"><label class="collection_check_boxes"
+                        for="auto_extra_ids_10">Park radarı</label></span><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="11" name="auto[extra_ids][]"
+                        id="auto_extra_ids_11"><label class="collection_check_boxes"
+                        for="auto_extra_ids_11">Kondisioner</label></span><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="12" name="auto[extra_ids][]"
+                        id="auto_extra_ids_12"><label class="collection_check_boxes"
+                        for="auto_extra_ids_12">Oturacaqların isidilməsi</label></span><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="13" name="auto[extra_ids][]"
+                        id="auto_extra_ids_13"><label class="collection_check_boxes" for="auto_extra_ids_13">Dəri
+                        salon</label></span><span class="checkbox"><input class="check_boxes optional form-control"
+                        type="checkbox" value="14" name="auto[extra_ids][]" id="auto_extra_ids_14"><label
+                        class="collection_check_boxes" for="auto_extra_ids_14">Ksenon lampalar</label></span><span
+                    class="checkbox"><input class="check_boxes optional form-control" type="checkbox" value="15"
+                        name="auto[extra_ids][]" id="auto_extra_ids_15"><label class="collection_check_boxes"
+                        for="auto_extra_ids_15">Arxa görüntü kamerası</label></span><span class="checkbox"><input
+                        class="check_boxes optional form-control" type="checkbox" value="16" name="auto[extra_ids][]"
+                        id="auto_extra_ids_16"><label class="collection_check_boxes" for="auto_extra_ids_16">Yan
+                        pərdələr</label></span><span class="checkbox"><input class="check_boxes optional form-control"
+                        type="checkbox" value="17" name="auto[extra_ids][]" id="auto_extra_ids_17"><label
+                        class="collection_check_boxes" for="auto_extra_ids_17">Oturacaqların
+                        ventilyasiyası</label></span></div>
+            <div class="input pond pond-grid" data-endpoint="https://photos.turbo.az/pond?lang=az"
+                data-name="gallery[photo_ids][]"><label for="" class="string optional control-label">Şəkillər</label>
+                <div class="pond-inner"><input accept="image/*" class="pond-new-img-field" multiple="" name="images[]"
+                        type="file">
+                    <div class="pond-message">Daha <span class="js-pond-img-count">21</span> şəkil əlavə edə bilərsiniz
+                    </div>
+                    <div class="pond-img-list ui-sortable ui-sortable-disabled">
+                        <div class="pond-descr">
+                            <ul class="rule_list">
+                                <li class="rule_item">- Minimum – 3 şəkil (ön, arxa və bütöv ön panelin görüntüsü
+                                    mütləqdir).</li>
+                                <li class="rule_item">- Maksimum – 21 şəkil.</li>
+                                <li class="rule_item">- Optimal ölçü – 1024x768 piksel.</li>
+                            </ul>
+                        </div>
+                        <div class="pond-img-card js-pond-img-card pond-img-card--front"></div>
+                        <div class="pond-img-card js-pond-img-card pond-img-card--back"></div>
+                        <div class="pond-img-card js-pond-img-card pond-img-card--dashboard">
+                        </div>
+                        <label class="pond-new-img-button pond-new-img" for="pond_input">Şəkil əlavə etmək</label>
+                        <!-- images -->
+                        <div class="allImagesDiv">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-rules">
+                <ul class="rule_list">
+                    <li class="rule_item">Şəkillər Azərbaycan Respublikasının ərazisində çəkilməlidir.</li>
+                    <li class="rule_item">Şəkillər yaxşı keyfiyyətdə olmalıdır. Nəqliyyat vasitəsi yaxşı işıqlandırılmış
+                        olmalı, şəkillərin üzərində loqotip və digər yazılar olmamalıdır. Skrinşotlar qəbul olunmur.
+                    </li>
+                </ul>
+                <ul class="rule_list">
+                    <li class="rule_item">Avtosalonda çəkilmiş şəkillər qeydiyyatdan keçmiş avtosalonun hesabından
+                        уerləşdirilməlidir.</li>
+                    <li class="rule_item">Şəxsi sahibi tərəfindən satılan nəqliyyat vasitəsinin şəkli avtosalon/rəsmi
+                        servis ərazisində və ya yaxınlığında çəkilməməlidir.</li>
+                </ul>
+            </div>
+            <div class="new-product--title">Əlaqə</div>
+            <div class="new-product-alert">Elan dərc olunduqdan sonra əlaqə məlumatları ilə bağlı heç bir dəyişiklik
+                həyata keçirilmir.</div>
+            <div class="new-product-i">
+                <div class="left-side seller-information">
+                    <div class="input string required auto_seller_name"><label class="string required control-label"
+                            for="auto_seller_name">Adınız <abbr title="required">*</abbr></label><input
+                            class="string required form-control" type="text" name="auto[seller_name]"
+                            id="auto_seller_name"></div>
+                    <div class="input select required auto_region"><label class="select required control-label"
+                            for="auto_region_id">Şəhər <abbr title="required">*</abbr></label><select
+                            class="select required form-control" name="auto[region_id]" id="auto_region_id">
+                            <option value="7">Ağcabədi</option>
+                            <option value="4">Ağdam</option>
+                            <option value="6">Ağdaş</option>
+                            <option value="5">Ağdərə</option>
+                            <option value="8">Ağstafa</option>
+                            <option value="10">Ağsu</option>
+                            <option value="9">Astara</option>
+                            <option value="78">Babək</option>
+                            <option selected="selected" value="1">Bakı</option>
+                            <option value="14">Balakən</option>
+                            <option value="13">Beyləqan</option>
+                            <option value="12">Bərdə</option>
+                            <option value="15">Biləsuvar</option>
+                            <option value="26">Cəbrayıl</option>
+                            <option value="25">Cəlilabad</option>
+                            <option value="27">Culfa</option>
+                            <option value="24">Daşkəsən</option>
+                            <option value="23">Dəliməmmədli</option>
+                            <option value="60">Füzuli</option>
+                            <option value="36">Gədəbəy</option>
+                            <option value="2">Gəncə</option>
+                            <option value="18">Goranboy</option>
+                            <option value="17">Göyçay</option>
+                            <option value="19">Göygöl</option>
+                            <option value="20">Göytəpə</option>
+                            <option value="77">Hacıqabul</option>
+                            <option value="22">Horadiz</option>
+                            <option value="32">İmişli</option>
+                            <option value="33">İsmayıllı</option>
+                            <option value="37">Kəlbəcər</option>
+                            <option value="41">Kürdəmir</option>
+                            <option value="42">Laçın</option>
+                            <option value="43">Lerik</option>
+                            <option value="11">Lənkəran</option>
+                            <option value="44">Liman</option>
+                            <option value="45">Masallı</option>
+                            <option value="46">Mingəçevir</option>
+                            <option value="47">Naftalan</option>
+                            <option value="48">Naxçıvan</option>
+                            <option value="49">Neftçala</option>
+                            <option value="50">Oğuz</option>
+                            <option value="51">Ordubad</option>
+                            <option value="35">Qax</option>
+                            <option value="34">Qazax</option>
+                            <option value="16">Qəbələ</option>
+                            <option value="21">Qobustan</option>
+                            <option value="38">Quba</option>
+                            <option value="39">Qubadlı</option>
+                            <option value="40">Qusar</option>
+                            <option value="52">Saatlı</option>
+                            <option value="53">Sabirabad</option>
+                            <option value="68">Şabran</option>
+                            <option value="71">Şahbuz</option>
+                            <option value="54">Salyan</option>
+                            <option value="73">Şamaxı</option>
+                            <option value="55">Samux</option>
+                            <option value="72">Şəki</option>
+                            <option value="69">Şəmkir</option>
+                            <option value="70">Şərur</option>
+                            <option value="74">Şirvan</option>
+                            <option value="56">Siyəzən</option>
+                            <option value="3">Sumqayıt</option>
+                            <option value="75">Şuşa</option>
+                            <option value="58">Tərtər</option>
+                            <option value="57">Tovuz</option>
+                            <option value="59">Ucar</option>
+                            <option value="62">Xaçmaz</option>
+                            <option value="61">Xankəndi</option>
+                            <option value="67">Xırdalan</option>
+                            <option value="66">Xızı</option>
+                            <option value="64">Xocalı</option>
+                            <option value="63">Xocavənd</option>
+                            <option value="65">Xudat</option>
+                            <option value="76">Yardımlı</option>
+                            <option value="28">Yevlax</option>
+                            <option value="29">Zaqatala</option>
+                            <option value="30">Zəngilan</option>
+                            <option value="31">Zərdab</option>
+                        </select></div>
+                    <div class="input email required auto_seller_email field_with_hint"><label
+                            class="email required control-label" for="auto_seller_email">E-mail <abbr
+                                title="required">*</abbr></label><input class="string email required form-control"
+                            type="email" name="auto[seller_email]" id="auto_seller_email"><span class="hint">saytda
+                            göstərilmir</span></div>
+                    <div class="input tel required auto_phones"><label class="tel required control-label"
+                            for="auto_phones">Telefon nömrəsi <abbr title="required">*</abbr></label><input
+                            class="string tel required form-control js-phones-input" multiple="multiple"
+                            placeholder="(000) 000-00-00" type="tel" name="auto[phones][]" id="auto_phones"></div>
+                    <div class="authorization-hint hidden js-authorization-hint">Nömrə SMS-kod ilə təsdiqləndikdən sonra
+                        bu elan yoxlamaya göndəriləcək və kabinetdə göstəriləcək.</div><button name="button"
+                        type="submit" class="submit-button" data-disable-with="Göndərilir...">Davam et</button>
+                </div>
+                <div class="right-side"></div>
+            </div>
+            <div class="new-product--confirm-rules">Elan yerləşdirərək, siz Turbo.az-ın <a target="_blank"
+                    href="/pages/terms-and-conditions">İstifadəçi razılaşması</a> və <a target="_blank"
+                    href="/pages/rules">Qaydaları</a> ilə razı olduğunuzu təsdiq edirsiniz</div>
+        </form>
+    </div>
+</div>
+@@include('./template/footer.html')

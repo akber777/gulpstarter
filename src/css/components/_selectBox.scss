@@ -1,0 +1,100 @@
+.SelectBox {
+  label {
+    display: none;
+  }
+}
+
+.CaptionCont {
+  box-shadow: unset !important;
+  border-color: transparent !important;
+  border-radius: 4px !important;
+}
+
+.SumoSelect {
+  width: 100%;
+
+  .CaptionCont {
+    span {
+      overflow: unset !important;
+    }
+  }
+
+  &.open {
+    .CaptionCont {
+      border: 1px solid #8d94ad !important;
+    }
+
+    .optWrapper {
+      top: 52px;
+      border-radius: 4px;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+      border: 1px solid #dfe3e9;
+
+      &.multiple {
+        li {
+          padding: 11px 11px 11px 38px !important;
+        }
+      }
+
+      label {
+        margin-bottom: 0;
+      }
+
+      li {
+        position: relative;
+        transition: 0.2s ease-in-out !important;
+        padding: 11px 14px !important;
+
+        .backColorSelect {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 15px;
+          z-index: 1;
+          border-radius: 100%;
+        }
+
+        &:hover {
+          transition: 0.2s ease-in-out !important;
+          color: #212c3a;
+          background-color: #f6f7fa !important;
+        }
+
+        &:first-child {
+          padding-left: 28px !important;
+        }
+
+        &.noPad {
+          padding-left: 11px !important;
+        }
+      }
+
+      .selected {
+        span {
+          i {
+            background-color: #ca1016 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.SumoSelect > .CaptionCont > span.placeholder {
+  font-style: normal;
+  color: #8d94ad;
+  font-size: 15px;
+}
+
+.tz-dropdown__option--reset {
+  span {
+    display: none !important;
+  }
+}
+
+.reportSumo {
+  padding: 16px 0;
+  border-color: transparent !important;
+}

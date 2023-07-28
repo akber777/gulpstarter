@@ -4,10 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gulp Is Awesome</title>
-    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="libs/normalize.css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libs/jquery.sumoselect-master/sumoselect.min.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
-<body>
-    <main>
+<body class="layout_home layout_home_index">
+    <div class="body-inner">
+        <div class="header" data-lotriver-header="">
+            <div class="header-bar-container">
+                <div class="header-bar tz-container tz-d-flex tz-align-center" data-lotriver-wrapper="">
+                    <div class="header-bar--left"><a target="_blank" class="header-tabs-i header-tabs-i_tap"
+                            href="https://tap.az/?utm_source=turboaz&amp;utm_medium=desktop-nav&amp;utm_campaign=only-logo">Tap.az</a><a
+                            target="_blank" class="header-tabs-i header-tabs-i_bina"
+                            href="https://bina.az/?utm_source=turboaz&amp;utm_medium=desktop-nav&amp;utm_campaign=only-logo">Bina.az</a><a
+                            target="_blank" class="header-tabs-i header-tabs-i_boss"
+                            href="https://boss.az/?utm_source=turboaz&amp;utm_medium=desktop-nav&amp;utm_campaign=only-logo">Boss.az</a>
+                    </div>
+                    <div class="header-bar--right">
+                        <div class="header-bar-i header-bar-i_support-phone"><span
+                                class="header-bar-i_support-phone-title">Dəstək: </span><span
+                                class="header-bar-i_support-phone-list"><span><a data-register-call="true"
+                                        href="tel:(012) 505-77-55">(012) 505-77-55</a></span></span></div><a
+                            class="header-bar-i" href="/help">Yardım</a><a class="header-bar-i"
+                            href="https://ru.turbo.az/?desktop_site=1">RU</a><a
+                            class="header-bar-i header-bar-i--bookmarks" href="/bookmarks">Seçilmişlər</a><a
+                            class="header-bar-i header-bar-i--login js-auth-link" href="#">Giriş</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-top-nav">
+                <div class="nav tz-container tz-d-flex tz-align-center"><a class="nav-i nav-i--home" href="/"><img
+                            alt="turbo.az"
+                            src="https://turbo.azstatic.com/assets/logo-67bbb214ce91649f92ed6036eba7e52c29f3e56614a8d1404283b4c23c5878d6.svg"></a><a
+                        class="nav-i" data-stat="header-all-ads-link" href="/autos">Bütün elanlar</a><a class="nav-i"
+                        data-stat="header-shops-link" href="/avtosalonlar">Avtosalonlar</a>
+                    <div class="nav-i--container"><a class="nav-i" target="_blank" data-stat="header-accessories-link"
+                            href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Ehtiyat
+                            hissələr və aksesuarlar</a>
+                        <div class="header-top--sub-nav"><a class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4045&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Aksesuarlar</a><a
+                                class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4046&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Audio
+                                və video texnika</a><a class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4044&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Avtokosmetika
+                                və avtokimya</a><a class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4047&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Ehtiyat
+                                hissələr</a><a class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4043&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">GPS
+                                naviqatorlar</a><a class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4119&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Qeydiyyat
+                                nişanları</a><a class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4048&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Siqnalizasiyalar</a><a
+                                class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=7476&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Videoqeydiyyatçılar</a><a
+                                class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4050&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Şinlər,
+                                disklər və təkərlər</a><a class="header-top--sub-nav-i" target="_blank"
+                                href="https://tap.az/elanlar/neqliyyat/ehtiyyat-hisseleri-ve-aksesuarlar?p%5B798%5D=4051&amp;utm_source=turboaz&amp;utm_medium=link&amp;utm_content=accessories&amp;utm_campaign=desktop">Digər</a>
+                        </div>
+                    </div><a class="header-new-btn" href="/autos/new"><span>Yeni elan</span></a>
+                </div>
+            </div>
+        </div>
