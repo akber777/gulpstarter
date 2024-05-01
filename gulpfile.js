@@ -50,7 +50,6 @@ function compileHtml() {
   return src(path.src.html)
     .pipe(
       fileinclude({
-        // fileinclude vasitesiyle src/template icinde olan html dosyalarimiz istediyimiz html fayllarina include edilir ve bir fayl seklinde build klasorune atilir
         prefix: "@@",
         basepath: "@file",
       })
@@ -69,7 +68,6 @@ function compileCss() {
     .pipe(sass())
     .pipe(
       autoprefixer({
-        // autoprefixer vasitesiyle cssde istifade edilen prefixleri ozu avtomatik olaraq bizim css kodlarina daxil edir
         cascade: false,
       })
     )
@@ -90,7 +88,7 @@ function compileCss() {
 
 function compileJs() {
   return src(path.src.js)
-    .pipe(concat("main.js")) // concat vasitesiyle butun js fayllari bir fayl seklinde birlesdirilir  ve  build klasorune atilir
+    .pipe(concat("main.js")) 
     .pipe(
       babel({
         presets: ["@babel/env"],
@@ -115,13 +113,13 @@ function imageCompile() {
       imagemin({
         use: [imageminMozjpeg()],
       })
-    ) // imagemin vasitesiyle src/img icinde olan butun sekiller resize edilerey olcusu kicildilir
+    )
     .pipe(gulp.dest(path.build.img));
 }
 
 // fonts compile
 function fontCompile(event) {
-  return src(path.src.fonts).pipe(gulp.dest(path.build.fonts)); // src/fonts icinde olan butun fontlar build/fonts klasorune atilir
+  return src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
 }
 
 // watch my task
@@ -145,7 +143,7 @@ const watcher = watch(
     path.src.img,
     path.src.fonts,
     path.src.libs,
-  ], // burada istifade edilen fayllarin yolu verilir
+  ],
   { interval: 100 }, // setInterval task
   parallel(
     compileHtml,
@@ -155,12 +153,12 @@ const watcher = watch(
     fontCompile,
     compileLibs
   )
-); // parallel function vasitesiyle butun functionlar parallel olaraq calisir
+); 
 
 watcher.on("unlink", function (path, stats) {
   let deletedHtml = path.split("/")[0].split("\\")[
     path.split("/")[0].split("\\").length - 1
-  ]; // html faylarinin silinib silinmediyi src icinde kontrol edilir
+  ]; 
 
   let deletedFont = path.split("/")[0].split("\\")[
     path.split("/")[0].split("\\").length - 1
