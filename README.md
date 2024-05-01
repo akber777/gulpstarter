@@ -1,9 +1,5 @@
 # gulpStarter
 
-## QEYD
-Starter Node.js in yeni versiyalarinda problem cixara bilir bunun olmaması üçün Node.js v14.15.5 versiyasını yoxlayın
-
-
 ### Installation
 Proyekti clone edtdikden sonra terminalı proyekt içinde açıb sırası ile aşağıdakı komandaları yazmaq lazımdır (node, bower ve gulp pc de yüklü deyilse ilk olaraq bu üçü yüklenmelidir)
 ```shell
