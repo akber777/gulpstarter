@@ -62,7 +62,7 @@ Bower packages are installed in the /lib folder, which we reference in the site
 All CSS class names follow the BEM naming convention
 
 ## LIVERELOAD
-LiveReload is integrated into the starter. When you press Ctrl + S, it automatically updates the modified files and refreshes everything, eliminating the need to manually refresh the browser
+LiveReload is integrated into the starter. When you save file, it automatically updates the modified files and refreshes everything, eliminating the need to manually refresh the browser
 
 ## IMAGES RESIZE
 Sometimes image resizing can be time-consuming. In such cases, you should deactivate .pipe(imagemin({use: [imageminMozjpeg()] })) in the imageCompile() function in gulpfile.js. You can reactivate it after completing the entire project. Resized images will be added to the build img folder
