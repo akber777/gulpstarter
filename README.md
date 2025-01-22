@@ -73,6 +73,3 @@ Bezen sekillerin resize olunması cox vaxt apara bilər bele olduqda gulpfile.js
 
 
 
-
-
-
