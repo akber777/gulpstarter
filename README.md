@@ -1,7 +1,7 @@
 # gulpStarter
 
 ### Installation
-Proyekti clone edtdikden sonra terminalı proyekt içinde açıb sırası ile aşağıdakı komandaları yazmaq lazımdır (node, bower ve gulp pc de yüklü deyilse ilk olaraq bu üçü yüklenmelidir)
+After cloning the project, open the terminal in the project directory and run the following commands in order (if node, bower, and gulp are not installed on your PC, install these three first)
 ```shell
 npm install
 ```
@@ -12,7 +12,7 @@ bower install
 gulp
 ```
 
-### Development terefinde istifade olunanlar
+### Development Tools Used
 #### GULP
 #### SASS
 #### NPM
@@ -21,55 +21,54 @@ gulp
 #### SMACSS 
 
 ## GULP
-Development terefinde bütün deyişiklikler **/src** klasörü içerisinde olunur gulp ile compile edilerek **/build** klasörüne atılır.
-Back-end developera  sadece **/build** klasörü içerisindekiler lazımdır
+All development changes are made in the **/src** folder and compiled with gulp into the **/build** folder.
+Back-end developers only need the contents of the **/build** folder.
 
-Gulp'da görülen işler <br />
--SASS kompile edilir<br />
--autoprefixer ile  prefixler elave olunur <br />
--fileinclude ile header ile footer kimi bütün seyfede olan layoutları import edirik<br />
--minify ile js dosyasını minify edirik<br />
--cleanCSS ile css dosyalarını minify edirik<br />
--rename ile minify edilen css dosyasının sonuna .min elave ederek adın deyişirik<br />
--concat ile js/main klasörü içinde yazdığımız ferqli .js dosyalarını birleşdirib main.js dosyasına atırıq<br />
+Tasks performed in Gulp:<br />
+-SASS compilation<br />
+-Adding prefixes with autoprefixer<br />
+-Importing layouts like header and footer using fileinclude<br />
+-Minifying js files<br />
+-Minifying css files with cleanCSS<br />
+-Renaming minified css files by adding .min suffix<br />
+-Concatenating different .js files from js/main folder into main.js<br />
 <br />
 ## SASS
-Sass dosyaları **/src** klasörü altındaki **/css** klasörü içerisindedi bütün css deyişiklikleri burda olunacaq daha rahat başa düşülmesi üçün **SMACSS** standartı ile klasörler yaradılıb hansı klasörde ne olduğu aşağıdadı <br />
+Sass files are in the **/css** folder under **/src**. All CSS changes will be made here. Folders are created using the **SMACSS** standard for better understanding. Here's what each folder contains:<br />
 
 ### /abstracts
-mixinler ve variable lar tutulur
+Contains mixins and variables
 
 ### /base
-
-bu klasörde temel bezi css dosyaları olur fontlar ucun css bu klasörde olur
+Contains basic CSS files like font styles
 
 ### /components
-Bu klasörde saytın birçox yerinde istifade olan elementler olur modal kimi pagination kimi komponentler yazıb her yerde rahatlıqla işledirik
+Contains reusable elements used throughout the site like modals and pagination components
 
 ### /layout
-Burda footer header navigation kimi layoutları tuturuq
+Contains layouts like footer, header, and navigation
 
 ### /pages
-Bu klasörde de her seyfeye aid bir css dosyası oluşdururuq her seyfeye aid css deyişikliklerini burda eleyirk 
-
+Contains CSS files for each page, where page-specific CSS changes are made
 
 ## NPM
-package.json dosyasında  development üçün hansı  paketlerin qurulduğu var
+package.json file lists all development dependencies
 
 ## BOWER
-Saytta istifade olunan bütün freamwork ve pluginler bower ile qurulub neler yüklendiyini  bower.json  dosyasına baxaraq göre bilersiz.
-Bower ile yüklenen paketler /lib klasörüne düşür biz sayt içinde bu /lib klasöründen çağırırıq
+All frameworks and plugins used in the site are installed via bower. You can see what's installed in the bower.json file.
+Bower packages are installed in the /lib folder, which we reference in the site
 
 ## BEM
-bütün css class adları BEM standardına uyğun olaraq verilib
-
+All CSS class names follow the BEM naming convention
 
 ## LIVERELOAD
-Startere livereload elave edilib ctrl + s etdiyiniz anda avtomatik olaraq starter ozu deyisikliy olunan fayllari yenilecey ve butun dosyalariniz yenilenecey  bununlada sizin 
-bowserde refresh etmeyinze ehtiyac qalmayacaq
+LiveReload is integrated into the starter. When you press Ctrl + S, it automatically updates the modified files and refreshes everything, eliminating the need to manually refresh the browser
 
 ## IMAGES RESIZE
-Bezen sekillerin resize olunması cox vaxt apara bilər bele olduqda gulpfile.js icersinde imageCompile() funksiyasının icində .pipe(imagemin({use: [imageminMozjpeg()] }))  deaktiv  etməy lazimıdir butun proyekti bitirdiyden sonra bunu aktiv edə bilərsiniz resize olunmuş şəkillər build img klasörüne əlavə ediləcəy
+Sometimes image resizing can be time-consuming. In such cases, you should deactivate .pipe(imagemin({use: [imageminMozjpeg()] })) in the imageCompile() function in gulpfile.js. You can reactivate it after completing the entire project. Resized images will be added to the build img folder
+
+
+
 
 
 
