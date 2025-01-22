@@ -9,5 +9,3 @@ class Gulp {
 
 }
 Gulp.gulp()
-
-// bu dosya ve bu dosyada yazilan butun jsler test ucundur js dosyasinda olan butun elementleri sile biler ozunuz istedyiniz yeni js fayllarini yarada bilersiniz
