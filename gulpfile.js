@@ -11,9 +11,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const babel = require("gulp-babel");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
-const clean = require("gulp-clean");
 const del = require("del");
-const exec = require("gulp-run");
 const browserSync = require("browser-sync").create();
 const fs = require("fs");
 
@@ -44,8 +42,11 @@ const path = {
   },
 };
 
-// compile html files
 
+let isUpdating = false;
+let updateTimeout = null;
+
+// compile html files
 function compileHtml() {
   return src(path.src.html)
     .pipe(
@@ -85,7 +86,6 @@ function compileCss() {
 }
 
 // compile js files
-
 function compileJs() {
   return src(path.src.js)
     .pipe(concat("main.js"))
@@ -106,7 +106,6 @@ function compileJs() {
 }
 
 // compile images and minify images
-
 function imageCompile() {
   return src(path.src.img)
     .pipe(
@@ -122,8 +121,58 @@ function fontCompile(event) {
   return src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
 }
 
-// watch my task
 
+function updateScssImports() {
+  if (isUpdating) return;
+
+  if (updateTimeout) {
+    clearTimeout(updateTimeout);
+  }
+
+  updateTimeout = setTimeout(() => {
+    isUpdating = true;
+
+    const directoryPath = pathNode.join(__dirname, "./src/css");
+    let allCssFiles = [];
+
+    try {
+      const files = fs.readdirSync(directoryPath);
+
+      files.forEach(function (file) {
+        if (file !== "main.scss" && fs.statSync(pathNode.join(directoryPath, file)).isDirectory()) {
+          const subFiles = fs.readdirSync(pathNode.join(directoryPath, file));
+
+          subFiles.forEach(function (replaceFile) {
+            if (replaceFile.endsWith('.scss')) {
+              let rep = replaceFile.replace(".scss", "");
+              let replaceAll = `@import "./${file}/${rep.replace("_", "")}";\n`;
+              allCssFiles.push(replaceAll);
+            }
+          });
+        }
+      });
+
+
+      const currentContent = fs.readFileSync("./src/css/main.scss", "utf8");
+      const newContent = allCssFiles.join("");
+
+
+      if (currentContent !== newContent) {
+        fs.writeFileSync("./src/css/main.scss", newContent);
+      }
+
+    } catch (error) {
+      console.error("SCSS imports güncellenirken hata:", error);
+    }
+
+    setTimeout(() => {
+      isUpdating = false;
+    }, 500);
+
+  }, 300); // 300ms debounce
+}
+
+// watch my task
 function liveServer() {
   browserSync.init({
     server: "build",
@@ -134,102 +183,84 @@ function liveServer() {
   });
 }
 
-const watcher = watch(
-  [
-    path.src.css,
+
+function watchFiles() {
+
+  watch([path.src.html, path.watch.html], { interval: 300 }, series(compileHtml))
+    .on('change', browserSync.reload);
+
+
+  watch([path.src.css, '!./src/css/main.scss'], { interval: 300 }, series(updateScssImports, compileCss))
+    .on('change', browserSync.reload);
+
+
+  watch('./src/css/main.scss', { interval: 300 }, series(compileCss))
+    .on('change', browserSync.reload);
+
+
+  watch(path.src.js, { interval: 300 }, series(compileJs))
+    .on('change', browserSync.reload);
+
+
+  watch(path.src.img, { interval: 300 }, series(imageCompile))
+    .on('change', browserSync.reload);
+
+  watch(path.src.fonts, { interval: 300 }, series(fontCompile))
+    .on('change', browserSync.reload);
+
+  watch(path.src.libs, { interval: 300 }, series(compileLibs))
+    .on('change', browserSync.reload);
+}
+
+
+function handleFileDelete() {
+  const watcher = watch([
     path.src.html,
-    path.watch.html,
-    path.src.js,
     path.src.img,
-    path.src.fonts,
-    path.src.libs,
-  ],
-  { interval: 100 }, // setInterval task
-  parallel(
-    compileHtml,
-    compileCss,
-    compileJs,
-    imageCompile,
-    fontCompile,
-    compileLibs
-  )
-);
+    path.src.fonts
+  ], { interval: 300 });
 
-watcher.on("unlink", function (path, stats) {
-  let deletedHtml = path.split("/")[0].split("\\")[
-    path.split("/")[0].split("\\").length - 1
-  ];
+  watcher.on("unlink", function (filePath, stats) {
+    const pathParts = filePath.split(pathNode.sep);
+    const fileName = pathParts[pathParts.length - 1];
 
-  let deletedFont = path.split("/")[0].split("\\")[
-    path.split("/")[0].split("\\").length - 1
-  ];
-
-  let deletedImg = path.split("/")[0].split("\\")[
-    path.split("/")[0].split("\\").length - 1
-  ];
-
-  (async () => {
-    const deletedFilePaths = await del([
-      "build/" + deletedHtml,
-      "build/fonts/" + deletedFont,
-      "build/img/" + deletedImg,
-      "!src/template/*.html",
-    ]);
-  })();
-});
-
-watcher.on("change", browserSync.reload);
-
-const directoryPath = pathNode.join(__dirname, "./src/css");
-
-let allCssFiles = [];
-
-watcher.on("change", async function () {
-  allCssFiles = [];
-  fs.readdir(directoryPath, function (err, files) {
-    files.forEach(function (file, i) {
-      if (file !== "main.scss") {
-        fs.readdir(directoryPath + "/" + file, function (error, splitFiles) {
-          splitFiles.forEach(function (replaceFile, index) {
-            let rep = replaceFile.replace(".scss", `"`);
-            let replaceAll =
-              "@import" + ` "` + "./" + file + "/" + rep.replace("_", "") + ";";
-            allCssFiles.push(replaceAll);
-          });
-        });
+    (async () => {
+      try {
+        await del([
+          `build/**/${fileName}`,
+          `!src/template/*.html`,
+        ]);
+        console.log(`Silindi: ${fileName}`);
+      } catch (error) {
+        console.error("Dosya silinirken hata:", error);
       }
-    });
+    })();
   });
+}
 
-  fs.readFile("./src/css/main.scss", "utf8", function (err, data) {
-    fs.writeFile(
-      "./src/css/main.scss",
-      allCssFiles.join("").toString(),
-      function (err, result) { }
-    );
-  });
-});
-
-exports.default = compileHtml;
-
-exports.default = fontCompile;
-
-exports.default = compileCss;
-
-exports.default = compileJs;
-
-exports.default = imageCompile;
-
-exports.default = compileLibs;
-
-exports.default = series(
-  parallel(
-    compileHtml,
-    compileCss,
-    compileJs,
-    imageCompile,
-    fontCompile,
-    compileLibs,
-    liveServer
-  )
+// Main build task
+const buildTask = parallel(
+  compileHtml,
+  compileCss,
+  compileJs,
+  imageCompile,
+  fontCompile,
+  compileLibs
 );
+
+// Development task
+const devTask = series(
+  buildTask,
+  parallel(liveServer, watchFiles, handleFileDelete)
+);
+
+// Export tasks
+exports.build = buildTask;
+exports.dev = devTask;
+exports.default = devTask;
+exports.html = compileHtml;
+exports.css = compileCss;
+exports.js = compileJs;
+exports.img = imageCompile;
+exports.fonts = fontCompile;
+exports.libs = compileLibs;
