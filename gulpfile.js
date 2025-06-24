@@ -88,7 +88,7 @@ function compileCss() {
 
 function compileJs() {
   return src(path.src.js)
-    .pipe(concat("main.js")) 
+    .pipe(concat("main.js"))
     .pipe(
       babel({
         presets: ["@babel/env"],
@@ -153,12 +153,12 @@ const watcher = watch(
     fontCompile,
     compileLibs
   )
-); 
+);
 
 watcher.on("unlink", function (path, stats) {
   let deletedHtml = path.split("/")[0].split("\\")[
     path.split("/")[0].split("\\").length - 1
-  ]; 
+  ];
 
   let deletedFont = path.split("/")[0].split("\\")[
     path.split("/")[0].split("\\").length - 1
@@ -205,7 +205,7 @@ watcher.on("change", async function () {
     fs.writeFile(
       "./src/css/main.scss",
       allCssFiles.join("").toString(),
-      function (err, result) {}
+      function (err, result) { }
     );
   });
 });

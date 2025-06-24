@@ -1,6 +1,1 @@
-console.log('STARTER BY AKBER AKHMEDZADEH')
-
-
-
-
-
+console.log("STARTER BY AKBAR AHMADZADA");

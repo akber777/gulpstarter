@@ -1,11 +1,16 @@
 {
-  "Name": "gulpstarter",
+  "name": "gulpstarter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Modern web development starter with Gulp, Bower and CLI tools",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build",
+    "dev": "gulp watch",
+    "clean": "gulp clean",
+    "bower": "bower install",
+    "postinstall": "bower install"
   },
   "keywords": [
     "gulpstarter",
@@ -21,7 +26,9 @@
     "imagemin",
     "sourcemaps",
     "webpack-stream",
-    "es6-modules"
+    "es6-modules",
+    "bower",
+    "cli-tools"
   ],
   "Author": {
     "NAME": "AKBER",
@@ -48,7 +55,18 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-watch": "^5.0.1",
-    "sass": "^1.43.3"
+    "sass": "^1.89.2",
+    "bower": "^1.8.14",
+    "gulp-bower": "^0.0.15",
+    "main-bower-files": "^2.13.3",
+    "gulp-filter": "^7.0.0",
+    "gulp-flatten": "^0.4.0",
+    "yargs": "^17.7.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-util": "^3.0.8",
+    "gulp-plumber": "^1.2.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-if": "^3.0.0"
   },
   "dependencies": {
     "del": "^6.0.0",
@@ -58,11 +76,14 @@
     "gulp-watchman": "^2.0.2",
     "imagemin-mozjpeg": "^9.0.0",
     "node-gyp": "^8.3.0",
-    "node-sass": "^6.0.1",
     "normalize.css": "^8.0.1"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "bin": {
+    "gulpstarter": "./bin/gulpstarter.js"
+  },
+  "preferGlobal": true
 }
